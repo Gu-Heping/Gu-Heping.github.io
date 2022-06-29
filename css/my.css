@@ -1,1 +1,9 @@
 /* Here is your custom css styles. */
+@font-face{
+    font-family: 'MaShanZheng-Regular';
+    src: url('../font/MaShanZheng-Regular.ttf');
+}
+
+body{
+    font-family: 'MaShanZheng-Regular';
+}
