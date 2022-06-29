@@ -1,7 +1,7 @@
 /* Here is your custom css styles. */
 @font-face{
     font-family: 'mashanzheng';
-    src: url('../font/MaShanZheng-Regular.ttf');
+    src: url('../font/MaShanZheng-Regular.woff');
 }
 
 body{
