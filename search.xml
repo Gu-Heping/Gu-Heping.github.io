@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CSS笔记</title>
+      <link href="/2022/06/30/css-bi-ji/"/>
+      <url>/2022/06/30/css-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<h2 id="使用CSS来修改元素的样式"><a href="#使用CSS来修改元素的样式" class="headerlink" title="使用CSS来修改元素的样式"></a>使用CSS来修改元素的样式</h2><h3 id="第一种方式（内联样式，行内样式）"><a href="#第一种方式（内联样式，行内样式）" class="headerlink" title="第一种方式（内联样式，行内样式）:"></a>第一种方式（内联样式，行内样式）:</h3><p>在标签内部通过style属性来设置元素的样式</p><pre class="line-numbers language-css" data-language="css"><code class="language-css">&lt;p style=<span class="token string">"color: red; font-size: 60px;"</span>>少小离家老大回，乡音无改鬓毛衰&lt;/p><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><blockquote><p>问题：<br>使用内联样式，样式只能对一个标签生效，<br>如果希望影响到多个元素必须在每一个元素中都复制一遍，<br>并且当样式发生变化时，我们必须要一个一个的修改，非常不方便</p><p><strong>注意：</strong>开发时绝对不要使用内联样式</p></blockquote><h3 id="第二种方式（内部样式表）"><a href="#第二种方式（内部样式表）" class="headerlink" title="第二种方式（内部样式表）"></a>第二种方式（内部样式表）</h3><p>将样式编写到head中的style标签里<br>然后通过CSS的选择器来选中元素并为其设置各种样式<br>可以同时为多个标签设置样式，并且修改时只需要修改一处即可全部应用</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">p</span><span class="token punctuation">&#123;</span>    <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>    <span class="token property">font-size</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>内部样式表更加方便对样式进行复用 </p><blockquote><p>问题：<br>我们的内部样式表只能对一个网页起作用，<br>它里面的样式不能跨页面进行复用</p></blockquote><h3 id="第三种方式（外部样式表）"><a href="#第三种方式（外部样式表）" class="headerlink" title="第三种方式（外部样式表）"></a>第三种方式（外部样式表）</h3><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>样式的继承，我们为一个元素设置的样式同时也会应用到它的后代元素上。</p><p>继承是发生在祖先和后代之间的。</p><p>继承的设计是为了方便我们的开发，<br>利用继承我们可以见一些通用的样式统一设置到共同的祖先元素上，<br>这样只需设置一次即可让所有的元素都具有该样式。</p><blockquote><p><strong>注意：</strong>并不是所有的样式都会被继承：<br>比如 背景相关的，布局相关等的这些样式都不会继承。<br>具体情况查表（Inherited）（zeal）</p></blockquote><h2 id="选择器的权重（优先级）"><a href="#选择器的权重（优先级）" class="headerlink" title="选择器的权重（优先级）"></a>选择器的权重（优先级）</h2><p>样式的冲突：</p><blockquote><p>当我们通过不同的选择器，选中相同的元素，并且为相同的样式设置不同的值时，此时就发生了样式的冲突。</p></blockquote><p>发生样式冲突时，应用哪个样式由选择器的权重（优先级）决定</p><p>选择器的权重：</p><blockquote><ul><li>内联（行内）样式   1,0,0,0</li><li>id选择器                   0,1,0,0</li><li>类和伪类选择器       0,0,1,0</li><li>元素选择器               0,0,0,1</li><li>通配选择器               0,0,0,0</li><li>继承的样式               没有优先级</li></ul><p>比较优先级时，需要将所有的选择器的优先级进行相加计算，最后优先级越高，则越优先显示（分组选择器时单独计算的），<br>选择器的累加不会超过其最大的数量级，类选择器再高也不会超过id选择器<br>如果优先级计算后相同，此时则优先使用靠下的样式（后面的覆盖前面的）</p><p>越具体，优先级越高</p><p>可以在某一个样式的后边添加  !important，则此时该样式会获取到最高的优先级，甚至超过内联样式<br>**注意:**在开发中要慎用</p></blockquote><p>角度刁钻的特例：</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#box1</span><span class="token punctuation">&#123;</span>    <span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token selector">div#box1</span><span class="token punctuation">&#123;</span>    <span class="token property">backgroung-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token selector">.red</span><span class="token punctuation">&#123;</span>    <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>以上代码最终的效果背景是黄色</p><blockquote><p>比较优先级时，需要将所有的选择器的优先级进行相加计算，最后优先级越高，则越优先显示</p></blockquote><p>另一个例子：</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div,p,span</span><span class="token punctuation">&#123;</span>    <span class="token property">color</span><span class="token punctuation">:</span> yellowgreen<span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><blockquote><p>此时三种选择器单独计算，不会加到一起（分组选择器）</p></blockquote><p>笔记没记完，还会更新</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>留言板</title>
       <link href="/2022/06/29/liu-yan-ban/"/>
       <url>/2022/06/29/liu-yan-ban/</url>
@@ -29,6 +54,12 @@
       
         <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>初中记的数学笔记，现在发出来（虽然现在用不到了）</p><h2 id="因式分解公式"><a href="#因式分解公式" class="headerlink" title="因式分解公式"></a>因式分解公式</h2><p><img src="https://s2.loli.net/2022/06/29/uHwhp5JaTXrtRMq.png" alt="因式分解公式"></p><h2 id="圆幂定理"><a href="#圆幂定理" class="headerlink" title="圆幂定理"></a>圆幂定理</h2><p><img src="https://s2.loli.net/2022/06/29/ZDC8QxEl1GU3wk4.png" alt="圆幂定理"></p><h2 id="塞瓦定理"><a href="#塞瓦定理" class="headerlink" title="塞瓦定理"></a>塞瓦定理</h2><p><img src="https://s2.loli.net/2022/06/29/zmNbFB7kwOWioY3.png" alt="塞瓦定理"></p><h2 id="正弦定理和余弦定理"><a href="#正弦定理和余弦定理" class="headerlink" title="正弦定理和余弦定理"></a>正弦定理和余弦定理</h2><p><img src="https://s2.loli.net/2022/06/29/ytLUwrDCPI7sfu3.png" alt="正弦定理和余弦定理"></p><h2 id="托勒密定理"><a href="#托勒密定理" class="headerlink" title="托勒密定理"></a>托勒密定理</h2><p><img src="https://s2.loli.net/2022/06/29/7dWICT3FOewRZfm.png" alt="托勒密定理"></p><h2 id="托勒密不等式"><a href="#托勒密不等式" class="headerlink" title="托勒密不等式"></a>托勒密不等式</h2><p><img src="https://s2.loli.net/2022/06/29/qwgWOQKISXVJ7M6.png" alt="托勒密不等式"></p><h2 id="三角形的五心"><a href="#三角形的五心" class="headerlink" title="三角形的五心"></a>三角形的五心</h2><p><img src="https://s2.loli.net/2022/06/29/XYFkIpq5SeL9KjE.png" alt="三角形的五心"></p>]]></content>
       
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
       
       
         <tags>
