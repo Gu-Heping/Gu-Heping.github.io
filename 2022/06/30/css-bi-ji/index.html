@@ -441,21 +441,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-30
+                    2022-07-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    887
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    7 分
                 </div>
                 
 
@@ -495,7 +495,106 @@
 <blockquote>
 <p>问题：<br>我们的内部样式表只能对一个网页起作用，<br>它里面的样式不能跨页面进行复用</p>
 </blockquote>
-<h3 id="第三种方式（外部样式表）"><a href="#第三种方式（外部样式表）" class="headerlink" title="第三种方式（外部样式表）"></a>第三种方式（外部样式表）</h3><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>样式的继承，我们为一个元素设置的样式同时也会应用到它的后代元素上。</p>
+<h3 id="第三种方式（外部样式表）最佳实践"><a href="#第三种方式（外部样式表）最佳实践" class="headerlink" title="第三种方式（外部样式表）最佳实践"></a>第三种方式（外部样式表）最佳实践</h3><p>可以将CSS样式编写到一个外部的CSS文件中，<br>然后通过link标签来引入外部的CSS文件</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">herf</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./style.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>外部样式表需要通过link标签进行引入，<br>意味着只要想使用这些样式的网页都可以对其进行引用<br>使样式可以在的不同页面之间进行复用。</p>
+<p>将样式编写到外部的CSS文件中，可以使用到浏览器的缓存机制，<br>从而加快网页的加载速度，提高用户的体验。</p>
+<h2 id="CSS语法"><a href="#CSS语法" class="headerlink" title="CSS语法"></a>CSS语法</h2><p>style标签中属于CSS，而不是HTML</p>
+<blockquote>
+<!-- -->注释在CSS中无效
+<p>CSS中的注释为 &#x2F;* *&#x2F; (似曾相识)</p>
+</blockquote>
+<p>例：</p>
+<pre class="line-numbers language-CSS" data-language="CSS"><code class="language-CSS">p&#123;
+    color: red;
+    font-size: 40px;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="选择器-x2F-声明块"><a href="#选择器-x2F-声明块" class="headerlink" title="选择器 &#x2F; 声明块"></a>选择器 &#x2F; 声明块</h3><h4 id="选择器（selectors）"><a href="#选择器（selectors）" class="headerlink" title="选择器（selectors）"></a>选择器（selectors）</h4><p>通过选择器可以选中页面中的指定元素<br>比如上述代码中的p的作用就是选中页面中所有的p元素</p>
+<h4 id="声明块"><a href="#声明块" class="headerlink" title="声明块"></a>声明块</h4><p>通过声明块来指定要为元素设置的样式</p>
+<p>声明块由一个一个的声明组成</p>
+<p>声明是一个名值对结构<br>一个样式名对应一个样式(properties)值，名和值之间以:连接，以;结尾</p>
+<h2 id="常用选择器"><a href="#常用选择器" class="headerlink" title="常用选择器"></a>常用选择器</h2><h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><p>作用：根据标签名来选中指定的元素<br>语法：标签名{}<br>例子：p{}  h1{}  div{}</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">p</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>以上代码将所有的段落设置为红色（字体）</p>
+<h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><p>作用：根据元素的id属性值选中一个元素<br>语法： #id属性值{}<br>例子：#box{}  #red{}</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#red</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+&lt;p id=<span class="token string">"red"</span>>儿童相见不相识&lt;/p><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以上代码只将“儿童相见不相识”段落设置为红色</p>
+<p>注：id不能重复</p>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><p>class是一个标签的属性，它和id类似，不同的是class可以重复使用<br>可以通过class属性来为元素分组</p>
+<p>作用：根据元素的class属性值选中一组元素<br>语法：.class属性值</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.blue</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+&lt;p class=<span class="token string">"blue"</span>>落霞与孤鹜齐飞&lt;/p>
+&lt;p class=<span class="token string">"blue"</span>>秋水共长天一色&lt;/p><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以上代码将“落霞与孤鹜齐飞”和“秋水共长天一色”两个元素设置为蓝色</p>
+<p>可以为一个元素指定多个class属性</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blue abc<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>我是标题<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="通配选择器"><a href="#通配选择器" class="headerlink" title="通配选择器"></a>通配选择器</h3><p>作用：选中页面中的所有元素<br>语法： *</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>以上代码将所有元素设置为红色</p>
+<h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><h3 id="交集选择器"><a href="#交集选择器" class="headerlink" title="交集选择器"></a>交集选择器</h3><p>作用：选中同时符合多个条件的元素<br>语法：选择器1选择器2选择器3选择器n{}<br>注意点：<br>交集选择器中如果有元素选择器，必须使用元素选择器开头<br>(id一般不用)</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div.red</span><span class="token punctuation">&#123;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/* 将class为red的div字体大小设置为30px */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="并集选择器（选择器分组）"><a href="#并集选择器（选择器分组）" class="headerlink" title="并集选择器（选择器分组）"></a>并集选择器（选择器分组）</h3><p>作用：同时选择多个选择器对应的元素<br>语法：选择器1，选择器2，选择器3，选择器n{}</p>
+<h2 id="关系选择器"><a href="#关系选择器" class="headerlink" title="关系选择器"></a>关系选择器</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="父元素"><a href="#父元素" class="headerlink" title="父元素"></a>父元素</h4><p>直接包含子元素的元素叫做父元素<del>（废话）</del></p>
+<h4 id="子元素"><a href="#子元素" class="headerlink" title="子元素"></a>子元素</h4><p>直接被父元素包含的元素是子元素<del>（废话）</del></p>
+<h4 id="祖先元素"><a href="#祖先元素" class="headerlink" title="祖先元素"></a>祖先元素</h4><p>直接或间接包含后代元素的元素叫做祖先元素<br>一个元素的父元素也是它的祖先元素</p>
+<h4 id="后代元素"><a href="#后代元素" class="headerlink" title="后代元素"></a>后代元素</h4><p>直接或间接被祖先元素包含的元素叫做后代元素<br>子元素也是后代元素</p>
+<h4 id="兄弟元素"><a href="#兄弟元素" class="headerlink" title="兄弟元素"></a>兄弟元素</h4><p>拥有相同父元素的元素是兄弟元素</p>
+<h3 id="例"><a href="#例" class="headerlink" title="例"></a>例</h3><h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    我是一个div
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+        我是div中的p元素
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>我是p元素中的span<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>我是div中的span元素<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h4><p>作用：选中指定父元素的指定子元素<br>语法：父元素 &gt; 子元素</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/*
+	为div的子元素span设置一个字体颜色红色
+	(为div直接包含的span设置一个字体颜色)
+*/</span>
+<span class="token selector">div > span</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">/*
+	选中div中的p中的span元素（禁止套娃）
+*/</span>
+<span class="token selector">div > p > span</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="后代元素选择器"><a href="#后代元素选择器" class="headerlink" title="后代元素选择器"></a>后代元素选择器</h4><p>作用：选中指定元素内的指定后代元素<br>语法：祖先 后代</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/*
+	选择div中的所有span元素
+*/</span>
+<span class="token selector">div span</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> skyblue<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="兄弟选择器"><a href="#兄弟选择器" class="headerlink" title="兄弟选择器"></a>兄弟选择器</h4><p>选择下一个兄弟（紧挨的元素）<br>语法：前一个 + 下一个</p>
+<p>选择下面所有的兄弟<br>语法：兄 ~ 弟</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>样式的继承，我们为一个元素设置的样式同时也会应用到它的后代元素上。</p>
 <p>继承是发生在祖先和后代之间的。</p>
 <p>继承的设计是为了方便我们的开发，<br>利用继承我们可以见一些通用的样式统一设置到共同的祖先元素上，<br>这样只需设置一次即可让所有的元素都具有该样式。</p>
 <blockquote>
@@ -545,6 +644,7 @@
 <blockquote>
 <p>此时三种选择器单独计算，不会加到一起（分组选择器）</p>
 </blockquote>
+<h2 id="原课程链接"><a href="#原课程链接" class="headerlink" title="原课程链接"></a>原课程链接</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1XJ411X7Ud">课程链接</a></p>
 <p>笔记没记完，还会更新</p>
 
                 
@@ -1399,7 +1499,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">968</span>
+                        class="white-color">2.1k</span>
             
             
             
