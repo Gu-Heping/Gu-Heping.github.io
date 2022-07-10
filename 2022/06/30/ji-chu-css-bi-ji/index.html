@@ -5,7 +5,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/css/loading.css">
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS笔记, Gu&#39;s Home">
+    <meta name="keywords" content="基础CSS笔记, Gu&#39;s Home">
     <meta name="description" content="一些关于CSS的知识点，防止忘记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -20,7 +20,7 @@
 
     
 
-    <title>CSS笔记 | Gu&#39;s Home</title>
+    <title>基础CSS笔记 | Gu&#39;s Home</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -293,7 +293,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS笔记</h1>
+                    <h1 class="description center-align post-title">基础CSS笔记</h1>
                 </div>
             </div>
         </div>
@@ -441,21 +441,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-01
+                    2022-07-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    11 分
                 </div>
                 
 
@@ -594,6 +594,78 @@
 
 <h4 id="兄弟选择器"><a href="#兄弟选择器" class="headerlink" title="兄弟选择器"></a>兄弟选择器</h4><p>选择下一个兄弟（紧挨的元素）<br>语法：前一个 + 下一个</p>
 <p>选择下面所有的兄弟<br>语法：兄 ~ 弟</p>
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>[属性名] 选择含有指定属性的元素</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">p[title]</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/*
+	以上代码将含有title属性的p元素设定为橙色
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>[属性名&#x3D;属性值] 选择含有指定属性和属性值的元素</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">p[title=abc]</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>[属性名^&#x3D;属性值] 选择属性值以指定值开头的元素</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">p[title^=abc]</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>[属性名$&#x3D;属性值] 选择属性值以指定值结尾的元素</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">p[title$=abc]</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>[属性名*&#x3D;属性值] 选择属性值中含有某值的元素的元素</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">p[title*=abc]</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><h3 id="伪类（不存在的类，特殊的类）"><a href="#伪类（不存在的类，特殊的类）" class="headerlink" title="伪类（不存在的类，特殊的类）"></a>伪类（不存在的类，特殊的类）</h3><p>伪类用来描述一个元素的特殊状态<br>比如：第一个子元素、被点击的元素、鼠标移入的元素…</p>
+<p>伪类一般情况下都是使用：开头</p>
+<blockquote>
+<p>:first-child 第一个子元素<br>:last-child 最后一个子元素<br>:nth-child() 选中第n个子元素</p>
+<blockquote>
+<p>特殊值：<br>n 第n个 n的范围0到正无穷<br>2n 或 even 表示选中偶数位的元素<br>2n+1 或 odd 表示选中奇数位的元素</p>
+</blockquote>
+<p>以上这些伪类都是根据所有的子元素进行排序</p>
+</blockquote>
+<blockquote>
+<p>:first-of-type<br>:last-of-type<br>:nth-of-type()<br>这几个伪类的功能和上述的类似，不同点是他们在同类型元素中进行排序1</p>
+</blockquote>
+<blockquote>
+<p>:not() 否定伪类<br>将符合条件的元素从选择器中去除</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">ul > li:not(:nth-of-type(3))</span><span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> yellowgreen<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+<h3 id="其他伪类"><a href="#其他伪类" class="headerlink" title="其他伪类"></a>其他伪类</h3><h4 id="link"><a href="#link" class="headerlink" title=":link"></a>:link</h4><p>用来表示没访问过的链接（正常的链接）</p>
+<h4 id="visited"><a href="#visited" class="headerlink" title=":visited"></a>:visited</h4><p>用来表示访问过的链接<br>由于隐私的原因，所以visited这个伪类只能修改链接的颜色</p>
+<h4 id="hover"><a href="#hover" class="headerlink" title=":hover"></a>:hover</h4><p>用来表示鼠标移入的状态</p>
+<h4 id="active"><a href="#active" class="headerlink" title=":active"></a>:active</h4><p>用来表示鼠标点击的状态</p>
+<h2 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h2><p>伪元素，表示页面中一些特殊的并不真实存在的元素（特殊的位置）</p>
+<p>伪元素使用::开头</p>
+<h4 id="first-letter"><a href="#first-letter" class="headerlink" title="::first-letter"></a>::first-letter</h4><p>表示第一个字母</p>
+<h4 id="first-line"><a href="#first-line" class="headerlink" title="::first-line"></a>::first-line</h4><p>表示第一行</p>
+<h4 id="selection"><a href="#selection" class="headerlink" title="::selection"></a>::selection</h4><p>表示选中的内容</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">p::selection</span><span class="token punctuation">&#123;</span>
+    <span class="token property">backgroung-color</span><span class="token punctuation">:</span> greenyellow<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="before"><a href="#before" class="headerlink" title="::before"></a>::before</h4><p>元素的开始位置</p>
+<h4 id="after"><a href="#after" class="headerlink" title="::after"></a>::after</h4><p>元素的最后</p>
+<blockquote>
+<p>before 和 after 必须结合content属性来使用</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div::before</span><span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'abc'</span><span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">div::after</span><span class="token punctuation">&#123;</span>
+    <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'haha'</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+<h2 id="选择器练习（餐厅练习）"><a href="#选择器练习（餐厅练习）" class="headerlink" title="选择器练习（餐厅练习）"></a>选择器练习（餐厅练习）</h2><p><a target="_blank" rel="noopener" href="https://flukeout.github.io/">CSS餐厅练习</a></p>
 <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>样式的继承，我们为一个元素设置的样式同时也会应用到它的后代元素上。</p>
 <p>继承是发生在祖先和后代之间的。</p>
 <p>继承的设计是为了方便我们的开发，<br>利用继承我们可以见一些通用的样式统一设置到共同的祖先元素上，<br>这样只需设置一次即可让所有的元素都具有该样式。</p>
@@ -644,8 +716,52 @@
 <blockquote>
 <p>此时三种选择器单独计算，不会加到一起（分组选择器）</p>
 </blockquote>
+<h2 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h2><h3 id="长度单位"><a href="#长度单位" class="headerlink" title="长度单位"></a>长度单位</h3><h4 id="像素"><a href="#像素" class="headerlink" title="像素"></a>像素</h4><p>屏幕（显示器）实际上是由一个一个的小点点构成的<br>不同屏幕的像素大小是不同的，像素越小的屏幕显示的效果越清晰<br>所以同样的200px在不同的设备下显示效果不一样</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box1</span><span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h4><p>也可以将属性值设置为相对于其父元素属性的百分比<br>设置百分比可以使子元素跟随父元素的改变而改变</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box2</span><span class="token punctuation">&#123;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> aqua<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="em"><a href="#em" class="headerlink" title="em"></a>em</h4><p>em是相对于元素的字体大小来计算的<br>1em &#x3D; 1font-size</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.box3</span><span class="token punctuation">&#123;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 10em<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 10em<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> greenyellow<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="rem-r-root"><a href="#rem-r-root" class="headerlink" title="rem (r : root)"></a>rem (r : root)</h4><p>rem是相对于根元素的字体大小来计算</p>
+<h3 id="颜色单位"><a href="#颜色单位" class="headerlink" title="颜色单位"></a>颜色单位</h3><p>在CSS中可以直接使用颜色名来设置各种颜色<br>比如： red、orange、yellow、blue、green……<br>但是在CSS中直接使用颜色名是非常的不方便</p>
+<h4 id="RGB值"><a href="#RGB值" class="headerlink" title="RGB值"></a>RGB值</h4><p>RGB通过三种颜色的不同浓度来调配出不同的颜色<br>R red，G green，B blue<br>每一种颜色的范围在0 - 255 (0% - 100%) 之间<br>语法：RGB(红色，绿色，蓝色)</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 255<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="RGBA"><a href="#RGBA" class="headerlink" title="RGBA"></a>RGBA</h4><p>就是在rgb的基础上增加了一个a表示不透明度<br>需要四个值，前三个和rgb一样，第四个表示不透明度<br>    1表示完全不透明   0表示完全透明  .5半透明</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>106<span class="token punctuation">,</span>153<span class="token punctuation">,</span>85<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>106<span class="token punctuation">,</span>153<span class="token punctuation">,</span>85<span class="token punctuation">,</span>.5<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="十六进制的RGB值"><a href="#十六进制的RGB值" class="headerlink" title="十六进制的RGB值"></a>十六进制的RGB值</h4><p>语法：#红色绿色蓝色<br>颜色浓度通过 00-ff<br>如果颜色两位两位重复可以进行简写</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> #ff0000<span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> #ffff00<span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> #ff0<span class="token punctuation">;</span>
+<span class="token property">background-color</span><span class="token punctuation">:</span> #bbffaa<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="HSL值（HSLA值）"><a href="#HSL值（HSLA值）" class="headerlink" title="HSL值（HSLA值）"></a>HSL值（HSLA值）</h4><p>H 色相（0 - 360）<br>S 饱和度，颜色的浓度 (0% - 100%)<br>L 亮度 ，颜色的浓度 (0% - 100%)</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">hsl</span><span class="token punctuation">(</span>30<span class="token punctuation">,</span> 100%<span class="token punctuation">,</span> 50%<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h2 id="原课程链接"><a href="#原课程链接" class="headerlink" title="原课程链接"></a>原课程链接</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1XJ411X7Ud">课程链接</a></p>
-<p>笔记没记完，还会更新</p>
 
                 
             </div>
@@ -672,7 +788,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gu-heping.github.io/2022/06/30/css-bi-ji/">https://gu-heping.github.io/2022/06/30/css-bi-ji/</a>
+                    <a href="https://gu-heping.github.io/2022/06/30/ji-chu-css-bi-ji/">https://gu-heping.github.io/2022/06/30/ji-chu-css-bi-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1499,7 +1615,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">2.1k</span>
+                        class="white-color">5.2k</span>
             
             
             

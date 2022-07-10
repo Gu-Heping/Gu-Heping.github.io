@@ -5,8 +5,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/css/loading.css">
     <meta charset="utf-8">
-    <meta name="keywords" content="初中数学笔记, Gu&#39;s Home">
-    <meta name="description" content="初中记的数学笔记，现在发出来（虽然现在用不到了）">
+    <meta name="keywords" content="CSS布局, Gu&#39;s Home">
+    <meta name="description" content="一些关于CSS布局的知识点，防止忘记">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +20,7 @@
 
     
 
-    <title>初中数学笔记 | Gu&#39;s Home</title>
+    <title>CSS布局 | Gu&#39;s Home</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s2.loli.net/2022/06/30/fTPJmwNDM37u9aR.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初中数学笔记</h1>
+                    <h1 class="description center-align post-title">CSS布局</h1>
                 </div>
             </div>
         </div>
@@ -409,8 +409,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E5%AD%A6/">
-                                <span class="chip bg-color">数学</span>
+                            <a href="/tags/%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">编程</span>
                             </a>
                         
                     </div>
@@ -434,28 +434,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-29
+                    2022-07-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-30
+                    2022-07-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    63
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -478,14 +478,137 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>初中记的数学笔记，现在发出来（虽然现在用不到了）</p>
-<h2 id="因式分解公式"><a href="#因式分解公式" class="headerlink" title="因式分解公式"></a>因式分解公式</h2><p><img src="https://s2.loli.net/2022/06/29/uHwhp5JaTXrtRMq.png" alt="因式分解公式"></p>
-<h2 id="圆幂定理"><a href="#圆幂定理" class="headerlink" title="圆幂定理"></a>圆幂定理</h2><p><img src="https://s2.loli.net/2022/06/29/ZDC8QxEl1GU3wk4.png" alt="圆幂定理"></p>
-<h2 id="塞瓦定理"><a href="#塞瓦定理" class="headerlink" title="塞瓦定理"></a>塞瓦定理</h2><p><img src="https://s2.loli.net/2022/06/29/zmNbFB7kwOWioY3.png" alt="塞瓦定理"></p>
-<h2 id="正弦定理和余弦定理"><a href="#正弦定理和余弦定理" class="headerlink" title="正弦定理和余弦定理"></a>正弦定理和余弦定理</h2><p><img src="https://s2.loli.net/2022/06/29/ytLUwrDCPI7sfu3.png" alt="正弦定理和余弦定理"></p>
-<h2 id="托勒密定理"><a href="#托勒密定理" class="headerlink" title="托勒密定理"></a>托勒密定理</h2><p><img src="https://s2.loli.net/2022/06/29/7dWICT3FOewRZfm.png" alt="托勒密定理"></p>
-<h2 id="托勒密不等式"><a href="#托勒密不等式" class="headerlink" title="托勒密不等式"></a>托勒密不等式</h2><p><img src="https://s2.loli.net/2022/06/29/qwgWOQKISXVJ7M6.png" alt="托勒密不等式"></p>
-<h2 id="三角形的五心"><a href="#三角形的五心" class="headerlink" title="三角形的五心"></a>三角形的五心</h2><p><img src="https://s2.loli.net/2022/06/29/XYFkIpq5SeL9KjE.png" alt="三角形的五心"></p>
+                <h2 id="文档流（normal-flow）"><a href="#文档流（normal-flow）" class="headerlink" title="文档流（normal flow）"></a>文档流（normal flow）</h2><p>网页是一个多层的结构，一层摞者一层<br>通过CSS可以分别为每一层来设置样式<br>作为用户来讲只能看到最顶上一层<br>这些层中，最底下的一层称为文档流，文档流是网页的基础<br>我们所创建的元素默认都是在文档流中进行排列的</p>
+<h3 id="元素的两种状态"><a href="#元素的两种状态" class="headerlink" title="元素的两种状态"></a>元素的两种状态</h3><h4 id="在文档流中"><a href="#在文档流中" class="headerlink" title="在文档流中"></a>在文档流中</h4><p>元素在文档流中的特点：</p>
+<h5 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h5><p>块元素会在页面中独占一行<br>默认宽度是父元素的全部（会把父元素撑满）<br>默认高度是被内容撑开（子元素）</p>
+<h5 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h5><p>行内元素不会独占页面的一行， 只占自身的大小<br>行内元素在页面中左向右水平排列，如果一行之中不能容纳下所有的行内元素<br>则元素会换到第二行继续从左向右排列（书写习惯一致）<br>行内元素的默认宽度和高度都是被内容撑开</p>
+<h4 id="不在文档流中（脱离文档流）"><a href="#不在文档流中（脱离文档流）" class="headerlink" title="不在文档流中（脱离文档流）"></a>不在文档流中（脱离文档流）</h4><p>空</p>
+<h2 id="盒子模型、盒模型、框模型（box-model）"><a href="#盒子模型、盒模型、框模型（box-model）" class="headerlink" title="盒子模型、盒模型、框模型（box model）"></a>盒子模型、盒模型、框模型（box model）</h2><p>CSS将页面中的所有元素都设置为了一个矩形的盒子<br>将元素设置为矩形的盒子后，对页面的布局就变成将不同的盒子摆放到不同的位置<br>每一个盒子都由一下几个部分组成：</p>
+<p>内容区（content）</p>
+<p>边框（border）</p>
+<p>内边距（padding）</p>
+<p>外边距（margin）</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 示例 */</span>
+<span class="token selector">.box1</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">/*
+    内容区
+    元素中的所有的子元素和文本内容都在内容区里面排列
+		内容去的大小由width和height两个属性来设置
+ 			width 设置内容区的宽度
+ 			height 设置内容区的高度
+    */</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #bfa<span class="token punctuation">;</span>
+    
+    <span class="token comment">/*
+    边框属于盒子边缘，边框里边属于盒子内部，出了边框都是盒子的外部
+		边框的大小会影响到整个盒子的大小
+    要设置边框，需要至少设置三个样式，
+    	
+    	边框的宽度 border-width
+    		默认值一般都是3个像素
+    		可以用来指定四个方向的边框的宽度
+    			值的情况
+    				四个值： 上 下 左 右 （顺时针）
+    				三个值： 上 左右 下 （左右对称）
+    				两个值： 上下 左右 （上下左右都对称）
+    				一个值： 上下左右 （上下左右一样）
+    			例：
+    				border-width: 10px 20px 30px 40px
+    		除了border-width还有一组 border-xxx-width
+    			xxx可以是 top right botton left
+				用来单独指定某一个边的宽度    
+    
+		边框的颜色 border-color
+    		用来指定边框的颜色，同样可以分别指定四个边的边框
+    			规则和border-width一样
+    		border-color也可以省略不写，如果省略了则自动使用color的颜色值
+    
+		边框的样式 border-style
+    		默认值是none 表示没有边框
+    		指定边框的样式
+    			solid 表示实线
+    			dotted 点状虚线
+    			sashed 虚线
+    			double 双线
+    		规则一样
+    */</span>
+    <span class="token property">border-width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">border-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token property">border-style</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
+    
+    <span class="token comment">/*
+    	border简写属性，通过该属性可以同时设置边框所有的相关样式，并且没有顺序要求
+    	除了border以外还有四个 border-xxx
+    */</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> solid 10px orange<span class="token punctuation">;</span>
+	<span class="token property">border-right</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    
+    <span class="token comment">/*
+    	内边距（padding）
+    		内容区和边框之间的距离是内边距
+    		一共有四个方向的内边距
+    		padding-xxx
+    		
+    		内边距的设置会影响到盒子的大小
+    		背景颜色会延伸到内边距上
+    
+    		显示内容区解决方案
+    		添加大小为100%的子元素，设置另一个颜色
+    
+    	一个盒子的可见框的大小，由内容区 内边距 和边框共同决定，
+    		所以在计算盒子大小时，需要将这三个区域加到一起计算
+    	
+    	padding内边距的简写属性，可以同时指定四个方向的内边距
+    		规则和 border-width 一样
+    */</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 10px 20px 30px 40px<span class="token punctuation">;</span>
+    
+    <span class="token comment">/*
+    	外边距（margin）
+    		外边距不会影响盒子可见框的大小
+    		但是外边距会影响盒子的位置
+    		一共有四个方向的外边距
+    		margin-xxx
+    	元素在页面中时按照自左向右的顺序排列的，
+    		所以默认情况下如果我们设置的左和上外边距则会移动元素自身
+    		而设置下和右外边距会移动其他元素
+    	margin也可以设置负值，如果是负值则元素会向相反的方向移动4
+    	margin的简写属性
+    	同上
+    	margin会影响到盒子实际占用空间
+    */</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="盒子的水平布局"><a href="#盒子的水平布局" class="headerlink" title="盒子的水平布局"></a>盒子的水平布局</h2><p>元素在其父元素中水平方向的位置由以下几个属性共同决定</p>
+<p>margin-left<br>border-left<br>padding-left<br>width<br>padding-right<br>border-right<br>margin-right</p>
+<p>一个元素在其父元素中水平布局必须要满足一下的等式</p>
+<p>margin-left + border-left + padding-left + width + padding-right + border-right+ margin-right &#x3D; 其父元素内容区的宽度（必须满足）</p>
+<p>如果计算结果使等式不成立，则称为过度约束，则等式会自动调整<br>调整的情况：<br>如果这七个值中没有为auto的情况，则浏览器自动调整margin-right值以使等式满足</p>
+<p>这七个值中有三个值可以设置为auto<br>width<br>margin-left<br>margin-right</p>
+<p>如果某个值为auto，则会自动调整为auto的那个值以使等式成立</p>
+<p>如果将一个宽度和一个外边距设置为auto，则宽度会调整到最大，设置为auto的外边距会自动为0</p>
+<p>如果将三个值都设置为auto，则外边距都是0，宽度最大</p>
+<p>如果将两个外边距设置为auto，宽度固定值，则会将外边距设置为相同的值<br>所以我们经常利用这个特点来使一个元素在其父元素中水平居中<br>示例：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">width</span><span class="token punctuation">:</span>xxxpx<span class="token punctuation">;</span>
+<span class="token property">margin</span><span class="token punctuation">:</span>0 auto<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="垂直方向的布局"><a href="#垂直方向的布局" class="headerlink" title="垂直方向的布局"></a>垂直方向的布局</h2><p>默认情况下父元素的高度被内容撑开</p>
+<p>子元素是在父元素的内容区中排列的，<br>如果子元素的大小超过了父元素，则子元素会从父元素中溢出<br>使用overflow属性来设置父元素如何处理溢出的子元素</p>
+<p>可选值：<br>visible，默认值 子元素会从父元素中溢出，在父元素外部的位置显示<br>hidden 溢出内容将会被裁剪不会显示<br>scroll 生成两个滚动条，通过滚动条来查看完整的内容<br>auto 根据需要生成滚动条</p>
+<p>扩展<br>overflow-x: 水平方向<br>overflow-y: 竖直方向</p>
+<h2 id="外边距的折叠（垂直）"><a href="#外边距的折叠（垂直）" class="headerlink" title="外边距的折叠（垂直）"></a>外边距的折叠（垂直）</h2><p>相邻的垂直方向外边距会发生重叠现象</p>
+<h3 id="兄弟元素"><a href="#兄弟元素" class="headerlink" title="兄弟元素"></a>兄弟元素</h3><p>兄弟元素间的相邻垂直外边距会取两者之间的较大值<br>特殊情况：<br>如果相邻的外边距一正一负，则取两者的和<br>如果相邻的外边距都是负值，则取两者中绝对值较大的</p>
+<p>兄弟元素之间的外边距的重叠，对于开发是有利的，所以我们不需要进行处理</p>
+<h3 id="父子元素"><a href="#父子元素" class="headerlink" title="父子元素"></a>父子元素</h3><p>父子元素间的相邻外边距，子元素的会传递给父元素（上外边距）</p>
+<p>父子外边距的折叠会影响到页面的布局，必须要进行处理</p>
+<h2 id="行内元素的盒模型"><a href="#行内元素的盒模型" class="headerlink" title="行内元素的盒模型"></a>行内元素的盒模型</h2><p>行内元素不支持设置宽度和高度（由内容决定）</p>
+<p>行内元素可以设置padding&#x2F;border&#x2F;margin，但是垂直方向不会影响页面的布局</p>
+<p>（超链接也是行内元素）</p>
+<h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><p>用来设置元素显示的类型<br>可选值：<br>inline 将元素设置为行内元素<br>block 将元素设置为块元素<br>inline-block 将元素设置为行内块元素<br> 行内块，即可以设置宽度和高度又不会独占一行<br>table 将元素设置为一个表格<br>none 元素不在页面中显示</p>
+<h3 id="visibility"><a href="#visibility" class="headerlink" title="visibility"></a>visibility</h3><p>用来设置元素的显示状态<br>可选值：<br>visible 默认值，元素在页面中正常显示<br>hidden 元素在页面中隐藏 不显示，但是依然占据页面的位置</p>
 
                 
             </div>
@@ -512,7 +635,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gu-heping.github.io/2022/06/29/chu-zhong-shu-xue-bi-ji/">https://gu-heping.github.io/2022/06/29/chu-zhong-shu-xue-bi-ji/</a>
+                    <a href="https://gu-heping.github.io/2022/07/10/css-bu-ju/">https://gu-heping.github.io/2022/07/10/css-bu-ju/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -550,8 +673,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E5%AD%A6/">
-                                    <span class="chip bg-color">数学</span>
+                                <a href="/tags/%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">编程</span>
                                 </a>
                             
                         </div>
@@ -1058,73 +1181,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/06/29/liu-yan-ban/">
+                <a href="/2022/07/10/css-bu-ju/">
                     <div class="card-image">
                         
+                        <img src="https://s2.loli.net/2022/06/30/fTPJmwNDM37u9aR.jpg" class="responsive-img" alt="CSS布局">
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="留言板">
-                        
-                        <span class="card-title">留言板</span>
+                        <span class="card-title">CSS布局</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            可以在这里留言评论。
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-06-29
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Gu
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                        <span class="chip bg-color">日常</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/06/29/chu-zhong-shu-xue-bi-ji/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="初中数学笔记">
-                        
-                        <span class="card-title">初中数学笔记</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            初中记的数学笔记，现在发出来（虽然现在用不到了）
+                            一些关于CSS布局的知识点，防止忘记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-10
                             </span>
                         <span class="publish-author">
                             
@@ -1142,8 +1220,57 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E5%AD%A6/">
-                        <span class="chip bg-color">数学</span>
+                    <a href="/tags/%E7%BC%96%E7%A8%8B/">
+                        <span class="chip bg-color">编程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/07/01/jing-dian-ren-wu-su-cai-min-guo-liu-fang/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="经典人物素材-民国流芳">
+                        
+                        <span class="card-title">经典人物素材-民国流芳</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            积累素材
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AF%AD%E6%96%87/">
+                        <span class="chip bg-color">语文</span>
                     </a>
                     
                 </div>
