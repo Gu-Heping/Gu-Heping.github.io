@@ -3,11 +3,11 @@
   <title>Gu&#39;s Home</title>
   
   
-  <link href="https://github.com/Gu-Heping/atom.xml" rel="self"/>
+  <link href="https://gu-heping.github.io/atom.xml" rel="self"/>
   
-  <link href="https://github.com/Gu-Heping/"/>
+  <link href="https://gu-heping.github.io/"/>
   <updated>2022-10-01T14:59:46.466Z</updated>
-  <id>https://github.com/Gu-Heping/</id>
+  <id>https://gu-heping.github.io/</id>
   
   <author>
     <name>Heping Gu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>博客日志-主题更换</title>
-    <link href="https://github.com/Gu-Heping/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/"/>
-    <id>https://github.com/Gu-Heping/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/</id>
+    <link href="https://gu-heping.github.io/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/"/>
+    <id>https://gu-heping.github.io/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/</id>
     <published>2022-10-01T08:09:50.000Z</published>
     <updated>2022-10-01T14:59:46.466Z</updated>
     
@@ -35,14 +35,14 @@
     
     
     
-    <category term="技术" scheme="https://github.com/Gu-Heping/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://gu-heping.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>博客日志-重新开始</title>
-    <link href="https://github.com/Gu-Heping/2022/10/01/chong-xin-kai-shi/"/>
-    <id>https://github.com/Gu-Heping/2022/10/01/chong-xin-kai-shi/</id>
+    <link href="https://gu-heping.github.io/2022/10/01/chong-xin-kai-shi/"/>
+    <id>https://gu-heping.github.io/2022/10/01/chong-xin-kai-shi/</id>
     <published>2022-10-01T04:56:32.000Z</published>
     <updated>2022-10-01T13:39:48.214Z</updated>
     
@@ -59,14 +59,14 @@
     
     
     
-    <category term="技术" scheme="https://github.com/Gu-Heping/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://gu-heping.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/Gu-Heping/2022/09/11/hello-world/"/>
-    <id>https://github.com/Gu-Heping/2022/09/11/hello-world/</id>
+    <link href="https://gu-heping.github.io/2022/09/11/hello-world/"/>
+    <id>https://gu-heping.github.io/2022/09/11/hello-world/</id>
     <published>2022-09-11T03:35:28.945Z</published>
     <updated>2022-09-11T03:35:28.945Z</updated>
     
