@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Gu&#39;s Home</title>
   
-  
+  <subtitle>沧海一粟</subtitle>
   <link href="https://gu-heping.github.io/atom.xml" rel="self"/>
   
   <link href="https://gu-heping.github.io/"/>
-  <updated>2022-10-01T14:59:46.466Z</updated>
+  <updated>2022-12-17T12:09:06.470Z</updated>
   <id>https://gu-heping.github.io/</id>
   
   <author>
@@ -17,11 +17,108 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>博客日志-主题更换</title>
+    <title>博客日志-主题色更改及字体更换</title>
+    <link href="https://gu-heping.github.io/2022/12/17/zhu-ti-se-geng-gai-ji-zi-ti-geng-huan/"/>
+    <id>https://gu-heping.github.io/2022/12/17/zhu-ti-se-geng-gai-ji-zi-ti-geng-huan/</id>
+    <published>2022-12-17T12:04:18.000Z</published>
+    <updated>2022-12-17T12:09:06.470Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;matery自带的红绿配色实在是有点辣眼，于是就改了一下，顺带换了个字体&lt;/p&gt;
+&lt;h2 id=&quot;参考文章&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://gu-heping.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="博客日志" scheme="https://gu-heping.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试</title>
+    <link href="https://gu-heping.github.io/2022/10/02/ce-shi/"/>
+    <id>https://gu-heping.github.io/2022/10/02/ce-shi/</id>
+    <published>2022-10-02T14:42:52.000Z</published>
+    <updated>2022-10-02T14:49:31.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;只是一个测试&quot;&gt;&lt;a href=&quot;#只是一个测试&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>博客日志-踩坑记录</title>
+    <link href="https://gu-heping.github.io/2022/10/02/cai-keng-ji-lu/"/>
+    <id>https://gu-heping.github.io/2022/10/02/cai-keng-ji-lu/</id>
+    <published>2022-10-02T10:41:36.000Z</published>
+    <updated>2022-10-02T10:50:53.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;评论系统弄好之后，本来想按照&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://gu-heping.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="博客日志" scheme="https://gu-heping.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客日志-关于博客宠物</title>
+    <link href="https://gu-heping.github.io/2022/10/02/guan-yu-bo-ke-chong-wu/"/>
+    <id>https://gu-heping.github.io/2022/10/02/guan-yu-bo-ke-chong-wu/</id>
+    <published>2022-10-02T07:43:24.000Z</published>
+    <updated>2022-10-02T07:50:01.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h2&gt;&lt;p&gt;可以参考以下几篇文章&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://gu-heping.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="博客日志" scheme="https://gu-heping.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客日志-主题更换以及功能完善</title>
     <link href="https://gu-heping.github.io/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/"/>
     <id>https://gu-heping.github.io/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/</id>
     <published>2022-10-01T08:09:50.000Z</published>
-    <updated>2022-10-01T14:59:46.466Z</updated>
+    <updated>2022-12-17T12:01:03.900Z</updated>
     
     
       
@@ -34,8 +131,10 @@
     
     
     
+    <category term="技术" scheme="https://gu-heping.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="技术" scheme="https://gu-heping.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="博客日志" scheme="https://gu-heping.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"/>
     
   </entry>
   
@@ -44,22 +143,24 @@
     <link href="https://gu-heping.github.io/2022/10/01/chong-xin-kai-shi/"/>
     <id>https://gu-heping.github.io/2022/10/01/chong-xin-kai-shi/</id>
     <published>2022-10-01T04:56:32.000Z</published>
-    <updated>2022-10-01T13:39:48.214Z</updated>
+    <updated>2022-12-17T11:59:57.725Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;如你所见，这个网站变得十分简陋，只剩一个模板，其他文章以及主题都没有了。&lt;/p&gt;
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;现在（2022-10-01）这个网站变得十分简陋，只剩一个模板，其他文章以及主题都没有了。&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
         
       
     
     
     
+    <category term="技术" scheme="https://gu-heping.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="技术" scheme="https://gu-heping.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="博客日志" scheme="https://gu-heping.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/"/>
     
   </entry>
   
@@ -68,7 +169,7 @@
     <link href="https://gu-heping.github.io/2022/09/11/hello-world/"/>
     <id>https://gu-heping.github.io/2022/09/11/hello-world/</id>
     <published>2022-09-11T03:35:28.945Z</published>
-    <updated>2022-09-11T03:35:28.945Z</updated>
+    <updated>2022-09-11T03:35:28.000Z</updated>
     
     
       

@@ -4,17 +4,111 @@
   
     
     <entry>
-      <title>博客日志-主题更换</title>
-      <link href="/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/"/>
-      <url>/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/</url>
+      <title>博客日志-主题色更改及字体更换</title>
+      <link href="/2022/12/17/zhu-ti-se-geng-gai-ji-zi-ti-geng-huan/"/>
+      <url>/2022/12/17/zhu-ti-se-geng-gai-ji-zi-ti-geng-huan/</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>锵锵！现在网站完全变了一副模样😎<br>如果你也想零成本拥有属于自己的网站，可以参考这篇文章，<a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程</a>。</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>本文主要是讲主题更换，具体可参考这篇文章，<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">matery，一个基于材料设计和响应式设计而成的全面、美观的Hexo主题</a>。<br>这是主题的官方文档，里面具体讲了如何安装主题并对其进行自定义。由于我已经折腾过一次，所以在安装及自定义上没有太大问题。<br>如果你在途中遇到了各种各样的问题，就百度吧，尽可能准确的描述自己的问题，并在海量的搜索结果中筛选可能有用的信息并进行尝试，倘若有错误代码，直接复制粘贴到搜索栏或许能更快地得到你想要的答案，在不断的试错中积累经验，在成功之后享受折腾的乐趣。</p><p>现在博客已经有了比较完整的功能，评论，文章分类、搜索、个人主页等等。</p><h2 id="插眼"><a href="#插眼" class="headerlink" title="插眼"></a>插眼</h2><h3 id="取消背景色："><a href="#取消背景色：" class="headerlink" title="取消背景色："></a>取消背景色：</h3><p>在theme主题目录下，找到<code>matery.css</code>文件,<code>ctrl+F</code>快捷键查找<code>.bg-cover:after</code>，注释掉即可。</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* .bg-cover:after {    -webkit-animation: rainbow 60s infinite;    animation: rainbow 60s infinite;} */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>选自<a href="https://zhuanlan.zhihu.com/p/259728821">hexo-matery主题美化(四) - 知乎 (zhihu.com)</a></p><h3 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h3><p><a href="https://valine.js.org/quickstart.html">快速开始 | Valine 一款快速、简洁且高效的无后端评论系统。</a></p><h3 id="在线聊天"><a href="#在线聊天" class="headerlink" title="在线聊天"></a>在线聊天</h3><p><a href="https://www.tidio.com/panel/visitors">Tidio</a></p><h3 id="说说"><a href="#说说" class="headerlink" title="说说"></a>说说</h3><p><a href="https://yezhechenyang.gitee.io/2020/100614065.html">【Hexo】matery添加Artitalk说说</a><br>这个之前没折腾过，弄了好长时间</p><h3 id="遇到的一个问题"><a href="#遇到的一个问题" class="headerlink" title="遇到的一个问题"></a>遇到的一个问题</h3><p><a href="https://blog.csdn.net/u012757419/article/details/105614028">git提示“warning: LF will be replaced by CRLF”的解决办法</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>matery自带的红绿配色实在是有点辣眼，于是就改了一下，顺带换了个字体</p><h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a href="https://cloud.tencent.com/developer/article/1622400">Matery主题自定义字体 - 腾讯云开发者社区-腾讯云 (tencent.com)</a><br><a href="https://blog.csdn.net/weixin_46399753/article/details/104768713">hexo中matery主题的个性化定制_Love——金哥哥的博客-CSDN博客_hexomatery</a></p>]]></content>
       
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 博客日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试</title>
+      <link href="/2022/10/02/ce-shi/"/>
+      <url>/2022/10/02/ce-shi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="只是一个测试"><a href="#只是一个测试" class="headerlink" title="只是一个测试"></a>只是一个测试</h1>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客日志-踩坑记录</title>
+      <link href="/2022/10/02/cai-keng-ji-lu/"/>
+      <url>/2022/10/02/cai-keng-ji-lu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>评论系统弄好之后，本来想按照<a href="https://github.com/DesertsP/Valine-Admin">DesertsP/Valine-Admin: 🔥A simple comment system based on LeanCloud and Valine.</a>弄一个评论的邮件提醒。</p><h2 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h2><p>结果弄到最后关键一步卡住了<br><img src="https://s2.loli.net/2022/10/02/dyHjhVugLs4cTtZ.png" alt="如图所示"></p><p>这个网站的域名实际上不属于我，如果要拥有自己的域名要花钱买，还要持续付费，买服务器等等，更不用说备案了，总之非常麻烦。</p><p>结果弄了很久，最后只能放弃。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>真想拥有自己的域名、服务器。估计要等到经济独立才行了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客日志-关于博客宠物</title>
+      <link href="/2022/10/02/guan-yu-bo-ke-chong-wu/"/>
+      <url>/2022/10/02/guan-yu-bo-ke-chong-wu/</url>
+      
+        <content type="html"><![CDATA[<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>可以参考以下几篇文章<br><a href="https://zhuanlan.zhihu.com/p/350654582">Hexo-如何养一只博客宠物</a><br><a href="https://blog.csdn.net/qq_43020645/article/details/82794092">hexo 增添宠物</a></p><p>我只是个搬运工(#｀-_ゝ-)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客日志 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客日志-主题更换以及功能完善</title>
+      <link href="/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/"/>
+      <url>/2022/10/01/bo-ke-ri-zhi-zhu-ti-geng-huan/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>锵锵！现在网站完全变了一副模样😎<br>如果你也想零成本拥有属于自己的网站，可以参考这篇文章，<a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程</a>。</p><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>本文主要是讲主题更换，具体可参考这篇文章，<a href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">matery，一个基于材料设计和响应式设计而成的全面、美观的Hexo主题</a>。<br>这是主题的官方文档，里面具体讲了如何安装主题并对其进行自定义。由于我已经折腾过一次，所以在安装及自定义上没有太大问题。<br>如果你在途中遇到了各种各样的问题，就百度吧，尽可能准确的描述自己的问题，并在海量的搜索结果中筛选可能有用的信息并进行尝试，倘若有错误代码，直接复制粘贴到搜索栏或许能更快地得到你想要的答案，在不断的试错中积累经验，在成功之后享受折腾的乐趣。</p><p>现在博客已经有了比较完整的功能，评论，文章分类、搜索、个人主页等等。</p><h2 id="插眼"><a href="#插眼" class="headerlink" title="插眼"></a>插眼</h2><h3 id="取消背景色："><a href="#取消背景色：" class="headerlink" title="取消背景色："></a>取消背景色：</h3><p>在theme主题目录下，找到<code>matery.css</code>文件,<code>ctrl+F</code>快捷键查找<code>.bg-cover:after</code>，注释掉即可。</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* .bg-cover:after {    -webkit-animation: rainbow 60s infinite;    animation: rainbow 60s infinite;} */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>选自<a href="https://zhuanlan.zhihu.com/p/259728821">hexo-matery主题美化(四) - 知乎 (zhihu.com)</a></p><h3 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h3><p><a href="https://valine.js.org/quickstart.html">快速开始 | Valine 一款快速、简洁且高效的无后端评论系统。</a><br>关于valine的一些自定义设置：<a href="https://blog.chrelyonly.cn/2022/02/20/7/">valine评论修改方案 </a><br>一开始像按照教程修改，发现valine版本太低<del>（而我连更新都不会）</del>，找了好久，翻了官方文档，又到别人的博客翻了很长时间，终于找到了，[为使用matery主题的hexo增加Valine评论系统](<a href="https://blog.csdn.net/slow_sparrow/article/details/117753100#:~:text=%E6%89%93%E5%BC%80">https://blog.csdn.net/slow_sparrow/article/details/117753100#:~:text=打开</a> themes[%26ma%26]terylayout_partial 中找到 valine.ejs,，找到其中的 new Valine ，大概在249行，修改为以下内容：)<br><a href="https://unpkg.com/valine@1.5.1/dist/Valine.min.js">https://unpkg.com/valine@1.5.1/dist/Valine.min.js</a><br><a href="https://blog.csdn.net/cungudafa/article/details/105548858?ops_request_misc=%7B%22request_id%22:%22166468882316782417098800%22,%22scm%22:%2220140713.130102334.pc_blog.%22%7D&amp;request_id=166468882316782417098800&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-3-105548858-null-null.article_score_rank_blog&amp;utm_term=valine&amp;spm=1018.2226.3001.4450">Valine-1.4.4新版本尝鲜+个性制定（表情包、qq头像、UI样式）</a><br><a href="https://blog.csdn.net/cungudafa/article/details/106218905?ops_request_misc=%7B%22request_id%22:%22166468882316782417098800%22,%22scm%22:%2220140713.130102334.pc_blog.%22%7D&amp;request_id=166468882316782417098800&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-1-106218905-null-null.article_score_rank_blog&amp;utm_term=valine&amp;spm=1018.2226.3001.4450">valine评论适配（最新版表情包接口，修改样式）</a><br><a href="https://lovelijunyi.gitee.io/posts/e52c.html">Valine评论系统详解</a><br>以上为可供参考的文章</p><h3 id="在线聊天"><a href="#在线聊天" class="headerlink" title="在线聊天"></a>在线聊天</h3><p><a href="https://www.tidio.com/panel/visitors">Tidio</a></p><h3 id="说说"><a href="#说说" class="headerlink" title="说说"></a>说说</h3><p><a href="https://yezhechenyang.gitee.io/2020/100614065.html">【Hexo】matery添加Artitalk说说</a><br>这个之前没折腾过，弄了好长时间，前前后后花了将近5个小时，找各种解决办法，总算成功了！😃（不过好像翻墙才能看）<br>记录一下关键问题的解决办法<br><a href="https://artitalk.js.org/demo.html">Artitalk.js</a><br><a href="https://www.shifeiti.com/blog/2022-08-23/">BBtalk 发表失败 403 的解决方案 - 是非题 (shifeiti.com)</a></p><h3 id="遇到的一个问题"><a href="#遇到的一个问题" class="headerlink" title="遇到的一个问题"></a>遇到的一个问题</h3><p><a href="https://blog.csdn.net/u012757419/article/details/105614028">git提示“warning: LF will be replaced by CRLF”的解决办法</a></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>虽然是第二次了，但仍然遇到很多新问题😣</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客日志 </tag>
             
         </tags>
       
@@ -27,13 +121,19 @@
       <link href="/2022/10/01/chong-xin-kai-shi/"/>
       <url>/2022/10/01/chong-xin-kai-shi/</url>
       
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如你所见，这个网站变得十分简陋，只剩一个模板，其他文章以及主题都没有了。</p><p><img src="https://s2.loli.net/2022/10/01/n9uemfWK521HFgR.png" alt="现在（2022年10月1日）网站的样子"></p><p><img src="https://s2.loli.net/2022/10/01/mSl2Ivo4gNW5rEq.png" alt="之前的网站"><br>由于电脑重装系统后<del>（都怪自己手欠把电脑整废了）</del>，博客的本地文件被删除（上传文章需要用本地的博客文件来上传更新)，原来的网站成了空壳，我不能对其作任何修改，不能上传文章，不能更新主题，只能访问。我之前所作的一切努力都白费了。</p><h2 id="再出发"><a href="#再出发" class="headerlink" title="再出发"></a>再出发</h2><p>于是利用某个假期，我重新在本地搭建好环境，准备从零开始再重复一遍之前的操作。<br>吸取上次的教训，我把博客本地文件放到onedrive里上传到云端，这样就能及时找回。<br><img src="https://s2.loli.net/2022/10/01/tFWPB7xcq5N8lL6.png" alt="我特意为此扩容了OneDrive"></p><h3 id="那原来的网站呢？"><a href="#那原来的网站呢？" class="headerlink" title="那原来的网站呢？"></a>那原来的网站呢？</h3><p>虽然那个博客已被废弃，但上面还是有很多东西值得留下来的，我在GitHub上新建了一个分支，将旧的网页文件存进去，这样只要我想，我就可以再访问那个旧博客。<br><img src="https://s2.loli.net/2022/10/01/sCFRtdHOlpDVPq9.png" alt="如图"></p><p>我打算更加充分的利用这个网站，不再仅仅追求将界面弄得如何的华丽，而注重优质内容的创作。我会出一个系列专门记录这个网站的成长，一方面作为回忆过去时可以翻看的材料，另一方面一方面总结经验。此外也会发一些其他类型的文章，日常、划水之类的，以丰富网站的内容。</p><h2 id="一个简单的自我介绍"><a href="#一个简单的自我介绍" class="headerlink" title="一个简单的自我介绍"></a>一个简单的自我介绍</h2><p>本人只是一个普通的高中生，一大爱好是折腾，不过这种折腾没有什么技术含量，仅仅是流于表面，跟着教程按部就班地弄一些花里胡哨的东西，不过我乐此不疲。</p><p>由于站主水平有限，写出来的文章往往存在很多问题，可以在评论区<del>（现在甚至连评论系统都没有）</del>提出建议。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>一起来见证这个网站蜕变的点点滴滴吧！</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>现在（2022-10-01）这个网站变得十分简陋，只剩一个模板，其他文章以及主题都没有了。</p><p><img src="https://s2.loli.net/2022/10/01/n9uemfWK521HFgR.png" alt="现在（2022年10月1日）网站的样子"></p><p><img src="https://s2.loli.net/2022/10/01/mSl2Ivo4gNW5rEq.png" alt="之前的网站"><br>由于电脑重装系统后<del>（都怪自己手欠把电脑整废了）</del>，博客的本地文件被删除（上传文章需要用本地的博客文件来上传更新)，原来的网站成了空壳，我不能对其作任何修改，不能上传文章，不能更新主题，只能访问。</p><h2 id="再出发"><a href="#再出发" class="headerlink" title="再出发"></a>再出发</h2><p>于是利用某个假期，我重新在本地搭建好环境，准备从零开始再重复一遍之前的操作。<br>吸取上次的教训，我把博客本地文件放到onedrive里上传到云端，这样就能及时找回。（本来想用github，但不会弄💧）<br><img src="https://s2.loli.net/2022/10/01/tFWPB7xcq5N8lL6.png" alt="我特意为此扩容了OneDrive"></p><h3 id="那原来的网站呢？"><a href="#那原来的网站呢？" class="headerlink" title="那原来的网站呢？"></a>那原来的网站呢？</h3><p>虽然那个博客已被废弃，但上面还是有很多东西值得留下来的，我在GitHub上新建了一个分支，将旧的网页文件存进去，这样只要我想，我就可以再访问那个旧博客。（后来我试了一下，发现不行）<br><img src="https://s2.loli.net/2022/10/01/sCFRtdHOlpDVPq9.png" alt="如图"></p><p>我打算更加充分的利用这个网站，不再仅仅追求将界面弄得如何的华丽，而注重优质内容的创作。我会出一个系列专门记录这个网站的成长，一方面作为回忆过去时可以翻看的材料，另一方面一方面总结经验。此外也会发一些其他类型的文章，日常、划水之类的，以丰富网站的内容。</p><h2 id="一个简单的自我介绍"><a href="#一个简单的自我介绍" class="headerlink" title="一个简单的自我介绍"></a>一个简单的自我介绍</h2><p>本人只是一个普通的高中生，一大爱好是折腾，不过这种折腾没有什么技术含量，仅仅是流于表面，跟着教程按部就班地弄一些花里胡哨的东西，不过我乐此不疲。</p><p>由于站主水平有限，写出来的文章往往存在很多问题，可以在评论区<del>（现在甚至连评论系统都没有）</del>提出建议。</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>一起来见证这个网站蜕变的点点滴滴吧！</p>]]></content>
       
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 博客日志 </tag>
             
         </tags>
       
