@@ -311,14 +311,14 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">1</a></span>
+    <span class="count"><a href="/categories">2</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">1</a></span>
+    <span class="count"><a href="/tags">2</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -341,14 +341,14 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">1</a></span>
+    <span class="count"><a href="/categories">2</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">1</a></span>
+    <span class="count"><a href="/tags">2</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -492,7 +492,7 @@
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,1,5,0,1],
+                data: [0,0,0,0,0,0,0,0,0,0,5,0,2],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -534,7 +534,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"技术","value":5}],
+                data: [{"name":"学习","value":1},{"name":"技术","value":5}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -558,7 +558,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["博客日志"]
+                data: ["博客日志","读书笔记"]
             }
         ],
         yAxis: [
@@ -571,7 +571,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [5],
+                data: [5,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -665,6 +665,12 @@
     <div class="other-skills chip-container" data-aos="zoom-in-up">
         <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
         <div class="tag-chips center-align">
+            
+            
+            <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+                <span class="chip center-align waves-effect waves-light chip-default">读书笔记</span>
+            </a>
+            
             
             
             <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/">
@@ -1141,34 +1147,6 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
-    
-        <script src="//code.tidio.co/80yztuj2a0pajwuyerupmolgqbs6ab8p.js"></script>
-        <script>
-            $(document).ready(function () {
-                setInterval(change_Tidio, 50);
-                function change_Tidio() {
-                    var tidio=$("#tidio-chat iframe");
-                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
-                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
-                    }
-                }
-            });
-        </script>
     
 
     

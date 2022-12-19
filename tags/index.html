@@ -301,10 +301,19 @@
             <div class="tag-chips">
                 
                 
+                <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="读书笔记: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="读书笔记" style="background-color: #F9EBEA;">读书笔记
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97/" title="博客日志: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="博客日志" style="background-color: #F9EBEA;">博客日志
+                            data-tagname="博客日志" style="background-color: #F5EEF8;">博客日志
                         <span class="tag-length">5</span>
                     </span>
                 </a>
@@ -333,7 +342,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"博客日志","weight":5,"link":"/tags/博客日志/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"读书笔记","weight":1,"link":"/tags/读书笔记/"},{"text":"博客日志","weight":5,"link":"/tags/博客日志/"}], {
         autoResize: true
     });
 </script>
@@ -700,34 +709,6 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
-    
-        <script src="//code.tidio.co/80yztuj2a0pajwuyerupmolgqbs6ab8p.js"></script>
-        <script>
-            $(document).ready(function () {
-                setInterval(change_Tidio, 50);
-                function change_Tidio() {
-                    var tidio=$("#tidio-chat iframe");
-                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
-                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
-                    }
-                }
-            });
-        </script>
     
 
     

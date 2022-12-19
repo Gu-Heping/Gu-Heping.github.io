@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>读书笔记-《自学大全》</title>
+      <link href="/2022/12/19/zi-xue-da-quan-du-shu-bi-ji/"/>
+      <url>/2022/12/19/zi-xue-da-quan-du-shu-bi-ji/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>在网上看到这本书，有些好奇，便买下来了</p></blockquote><h2 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h2><h3 id="2022-12-19-16-11"><a href="#2022-12-19-16-11" class="headerlink" title="2022-12-19 16:11"></a>2022-12-19 16:11</h3><ul><li>用活动课的时间发了这篇文章，简单介绍缘由</li></ul><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>书的样子如下，但愿它能给我带来改变 :)</p><p><img src="https://s2.loli.net/2022/12/19/ZBsetCwbOy7kuhS.jpg" alt="自学大全"></p><h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 读书笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客日志-主题色更改及字体更换</title>
       <link href="/2022/12/17/zhu-ti-se-geng-gai-ji-zi-ti-geng-huan/"/>
       <url>/2022/12/17/zhu-ti-se-geng-gai-ji-zi-ti-geng-huan/</url>
@@ -136,19 +161,6 @@
             <tag> 博客日志 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2022/09/11/hello-world/"/>
-      <url>/2022/09/11/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
