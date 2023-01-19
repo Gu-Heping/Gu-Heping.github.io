@@ -302,11 +302,11 @@
                 
                 
                 
-                <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="学习: 1">
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="学习: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F9EBEA;">学习
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -362,7 +362,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"学习","max":6},{"name":"技术","max":6}],
+            indicator: [{"name":"学习","max":7},{"name":"技术","max":7}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -373,7 +373,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1,5],
+                    value : [2,5],
                     name : '文章分类数量'
                 }
             ]
@@ -448,7 +448,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2022</span>
+                <span id="year">2022-2023</span>
             
             <span id="year">2022</span>
             <a href="/about" target="_blank">Heping Gu</a>
@@ -517,45 +517,6 @@
                         document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
                             " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
                     }
-                }
-                setInterval(siteTime, 1000);
-            </script>
-            <span id="storytime"></span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2022";
-                    var startMonth = "10";
-                    var startDate = "1";
-                    var startHour = "21";
-                    var startMinute = "30";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(2021, 8, 26, 19, 50, 0);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                 
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "故事已经开始 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    
                 }
                 setInterval(siteTime, 1000);
             </script>

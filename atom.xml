@@ -6,7 +6,7 @@
   <link href="https://gu-heping.github.io/atom.xml" rel="self"/>
   
   <link href="https://gu-heping.github.io/"/>
-  <updated>2022-12-19T08:21:48.244Z</updated>
+  <updated>2023-01-19T04:27:09.499Z</updated>
   <id>https://gu-heping.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读书笔记-《汇编语言》</title>
+    <link href="https://gu-heping.github.io/2023/01/19/hui-bian-yu-yan-du-shu-bi-ji/"/>
+    <id>https://gu-heping.github.io/2023/01/19/hui-bian-yu-yan-du-shu-bi-ji/</id>
+    <published>2023-01-19T04:25:32.000Z</published>
+    <updated>2023-01-19T04:27:09.499Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;测试&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://gu-heping.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="读书笔记" scheme="https://gu-heping.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>读书笔记-《自学大全》</title>
