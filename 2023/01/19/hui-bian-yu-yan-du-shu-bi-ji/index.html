@@ -423,14 +423,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.8k
+                    8.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    31 分
+                    32 分
                 </div>
                 
 
@@ -910,10 +910,14 @@
 <p>在一进入Debug后，用D命令直接查看，将列出Debug预设的地址处的内容，如下图所示。</p>
 <p><img src="https://s2.loli.net/2023/01/24/m8ZfNtCMLicF2BH.png" alt="列出Debug预设的地址处的内容"></p>
 <p>在使用“d 段地址:偏移地址”之后，接着使用D命令，可列出后续内容，如下图所示</p>
-<p><img src="C:\Users\gu\AppData\Roaming\Typora\typora-user-images\image-20230124170345651.png" alt="列出后续的内容"></p>
+<p><img src="https://s2.loli.net/2023/01/24/SnYb4y1jTuxlBaf.png" alt="列出后续的内容"></p>
 <p>也可以指定D命令的查看范围，此时采用“d 段地址:起始偏移地址 结尾偏移地址”的格式。<br>比如要看1000:0~1000:9的内容，可以用“d 1000:0 9”实现，如下图所示。</p>
 <p><img src="https://s2.loli.net/2023/01/24/dNqxjD2HYnJGBOa.png" alt="查看1000:0~1000:9单元中的内容"></p>
 <p>如果我们就想查看内存单元10000H中的内容， 可以用下图中的任何一种方法看到，因为图中的所有“段地址:偏移地址”都表示了10000H这一物理地址。</p>
+<p><img src="C:\Users\gu\AppData\Roaming\Typora\typora-user-images\image-20230124172929935.png" alt="用3种不同的段地址和偏移地址查看同一个物理地址中的内容"></p>
+<h5 id="（6-用Debug中的E命令改写内存中的内容。"><a href="#（6-用Debug中的E命令改写内存中的内容。" class="headerlink" title="（6) 用Debug中的E命令改写内存中的内容。"></a>（6) 用Debug中的E命令改写内存中的内容。</h5><p>可以使用E命令来改写内存中的内容，比如，要将内存1000:0~1000:9单元中的内容分别写成0、1、2、3、4、5、6、7、8、9，可以用“e 起始地址 数据 数据 数据 ……” 的格式来进行，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/24/zK3Ow1iuAsILQnc.png" alt="用E命令修改从1000:0开始的10个单元的内容"></p>
+<p>上图中，先用D命令查看1000:0<del>1000:f单元的内容，再用E命令修改从1000:0开始的10个单元的内容，最后用D命令查看1000:0</del>1000:f中内容的变化。</p>
 <hr>
 <h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
                 
@@ -1773,7 +1777,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.4k</span>&nbsp;字
+                class="white-color">10.5k</span>&nbsp;字
             
             
             
