@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gu's Home" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Gu's Home" type="application/atom+xml">
 </head>
 
 
@@ -423,14 +423,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.3k
+                    8.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    30 分
+                    31 分
                 </div>
                 
 
@@ -896,8 +896,24 @@
 <p>使用“d 段地址:偏移地址”的格式，Debug将列出从指定内存单元开始的128个内存单元的内容。上图中，在使用d 1000:0后，Debug列出了1000:0~1000:7F中的内容。</p>
 <p>使用D命令，Debug将输出3部分内容（如上图所示）</p>
 <ol>
-<li>中间是从指定地址开始的128个内存单元的内容，用十六进制的格式输出，每行的输出从16的整数倍的地址开始，最多输出16个单元的内容。<br>从图中，我们可以知道，内存1000:0单元中的内容是0，内存1000:0<del>1000:F中的内容都在第一行；<br>内存1000:10中的内容是0，内存1000:11处的内容是0，内存1000:10</del>1000:1F中的内容都在第二行。<br>注意每行的中间有一个“-”，它将每行的输出分为两部分，这样便于查看。<br>比如，要想从图中找出1000:6B单元中内容</li>
+<li><p>中间是从指定地址开始的128个内存单元的内容，用十六进制的格式输出，每行的输出从16的整数倍的地址开始，最多输出16个单元的内容。<br>从图中，我们可以知道，内存1000:0单元中的内容是0，内存1000:0<del>1000:F中的内容都在第一行；<br>内存1000:10中的内容是0，内存1000:11处的内容是0，内存1000:10</del>1000:1F中的内容都在第二行。<br>注意每行的中间有一个“-”，它将每行的输出分为两部分，这样便于查看。<br>比如，要想从图中找出1000:6B单元中内容，可以从1000:60找到行，“-”前面是1000:60<del>1000:67的8个单元，后面是1000:68</del>1000:6F的8个单元，这样我们就可以从1000:68单元向后数3个单元，找到1000:6B单元，可以看到，1000:6B中的内容为0.</p>
+</li>
+<li><p>左边是每行的起始地址。</p>
+</li>
+<li><p>右边是每个内存单元中的数据对应的可显示的ASCII码字符。没有对应可显示的ASCII字符，Debug就用“.”来代替。</p>
+<p>注意，我们看到的内存中的内容，在不同的计算机中是不一样的，也可能每次用Debug看到的内容都不相同，因为我们用Debug看到的都是原来就在内存中的 内容，这些内容受随时都有可能变化的系统环境的影响。<br>当然，我们也可以改变内存、寄存器中的内容。</p>
+<p>我们使用d 1000:9查看1000:9处的内容，Debug将怎样输出呢？如下图所示.</p>
+<p><img src="https://s2.loli.net/2023/01/24/78Rf9gam2yHQKcV.png" alt="查看1000:9处的内容"></p>
+</li>
 </ol>
+<p>Debug从1000:9开始显示，一直到1000:88，一共是128个字节。<br>第一行中的1000:0~1000:8单元中的内容不显示。</p>
+<p>在一进入Debug后，用D命令直接查看，将列出Debug预设的地址处的内容，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/24/m8ZfNtCMLicF2BH.png" alt="列出Debug预设的地址处的内容"></p>
+<p>在使用“d 段地址:偏移地址”之后，接着使用D命令，可列出后续内容，如下图所示</p>
+<p><img src="C:\Users\gu\AppData\Roaming\Typora\typora-user-images\image-20230124170345651.png" alt="列出后续的内容"></p>
+<p>也可以指定D命令的查看范围，此时采用“d 段地址:起始偏移地址 结尾偏移地址”的格式。<br>比如要看1000:0~1000:9的内容，可以用“d 1000:0 9”实现，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/24/dNqxjD2HYnJGBOa.png" alt="查看1000:0~1000:9单元中的内容"></p>
+<p>如果我们就想查看内存单元10000H中的内容， 可以用下图中的任何一种方法看到，因为图中的所有“段地址:偏移地址”都表示了10000H这一物理地址。</p>
 <hr>
 <h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
                 
@@ -1757,7 +1773,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">9.9k</span>&nbsp;字
+                class="white-color">10.4k</span>&nbsp;字
             
             
             
