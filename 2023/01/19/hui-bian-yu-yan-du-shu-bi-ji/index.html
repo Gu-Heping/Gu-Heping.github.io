@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gu's Home" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="Gu's Home" type="application/atom+xml">
 </head>
 
 
@@ -416,21 +416,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-01-24
+                    2023-01-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.9k
+                    15.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    32 分
+                    55 分
                 </div>
                 
 
@@ -918,8 +918,210 @@
 <h5 id="（6-用Debug中的E命令改写内存中的内容。"><a href="#（6-用Debug中的E命令改写内存中的内容。" class="headerlink" title="（6) 用Debug中的E命令改写内存中的内容。"></a>（6) 用Debug中的E命令改写内存中的内容。</h5><p>可以使用E命令来改写内存中的内容，比如，要将内存1000:0~1000:9单元中的内容分别写成0、1、2、3、4、5、6、7、8、9，可以用“e 起始地址 数据 数据 数据 ……” 的格式来进行，如下图所示。</p>
 <p><img src="https://s2.loli.net/2023/01/24/zK3Ow1iuAsILQnc.png" alt="用E命令修改从1000:0开始的10个单元的内容"></p>
 <p>上图中，先用D命令查看1000:0<del>1000:f单元的内容，再用E命令修改从1000:0开始的10个单元的内容，最后用D命令查看1000:0</del>1000:f中内容的变化。</p>
-<hr>
-<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
+<p>也可以采用提问的方式来一个一个地改写内存中的内容，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/24/ehIOYfPswADSX8o.png" alt="用E命令修改从1000:10开始的4个单元的内容"></p>
+<p>如上图中，可以用E命令以提问的方式来逐个地修改从某一地址开始的内存单元中的内容，以从1000:10单元为例，步骤如下。</p>
+<ol>
+<li>输入e 1000:10，按Enter键</li>
+<li>Debug显示起始地址1000:0010，和第一单元（即1000:0010单元）的原始内容：6D，然后光标停在“.”的后面提示输入想要写入的数据，此时可以有两个选择：其一为输入数据（我们输入的是0），然后按空格键，即用输入的数据改写当前的内存单元；其二为不输入数据，直接按空格键，则不对当前内存单元进行改写。</li>
+<li>当前内存单元处理完成后（无论是改写或没有改写，只要按了空格键，就表示处理完成），Debug将接着显示下一个内存单元的原始内容，并提示进行修改，读者可以用同样的方法处理。</li>
+<li>所有希望改写的内存单元改写完毕后，按Enter键，E命令操作结束。</li>
+</ol>
+<p>可以用E命令向内存中写入字符，比如，用E命令从内存1000:0开始写入数值1、字符“a”、数值2、字符“b”、数值3、字符“c”，可采用下图中所示的方法进行。</p>
+<p><img src="https://s2.loli.net/2023/01/24/Dm7lqZ9hvwz6eJU.png" alt="用E命令向内存中写入字符"></p>
+<p>从上图中可以看出，Debug对E命令的执行结果，向1000:0、1000:2、1000:4单元中写入数值1、2、3，向1000:1、1000:3、1000:5单元中写入字符“a”、“b”、“c”的ASCII码值：61H、62H、63H。</p>
+<p>也可以用E命令向内存中写入字符串，比如，用E命令从内存1000:0开始写入：数值1、字符串“a+b”、数值2、字符串“c++”、字符3、字符串“IBM”，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/24/ZlAjYJ9ErDGmtV1.png" alt="用E命令向内存中写入字符串"></p>
+<h5 id="（7）用E命令向内存中写入机器码，用U命令查看内存中机器码的含义，用T命令执行内存中的机器码。"><a href="#（7）用E命令向内存中写入机器码，用U命令查看内存中机器码的含义，用T命令执行内存中的机器码。" class="headerlink" title="（7）用E命令向内存中写入机器码，用U命令查看内存中机器码的含义，用T命令执行内存中的机器码。"></a>（7）用E命令向内存中写入机器码，用U命令查看内存中机器码的含义，用T命令执行内存中的机器码。</h5><p>如何向内存中存入机器码呢？<br>我们知道，机器码也是数据，当然可以用E命令将机器码写入内存。<br>比如我们要从内存1000:0单元开始写入这样一段机器码：</p>
+<table>
+<thead>
+<tr>
+<th>机器码</th>
+<th>对应的汇编指令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>b80100</td>
+<td>mov ax,0001</td>
+</tr>
+<tr>
+<td>b90200</td>
+<td>mov cx,0002</td>
+</tr>
+<tr>
+<td>01c8</td>
+<td>add ax,cx</td>
+</tr>
+</tbody></table>
+<p>可用如下图中所示的方法进行。</p>
+<p><img src="https://s2.loli.net/2023/01/24/hiXEaUJmkfyjZcC.png" alt="用E命令将机器码写入内存"></p>
+<p>如何查看写入的或内存中原有的机器码所对应的汇编指令呢？<br>可以使用U命令将从1000:0开始的内存单元中的内容翻译为汇编指令，并显示出来。如下图所示</p>
+<p><img src="C:\Users\gu\AppData\Roaming\Typora\typora-user-images\image-20230124225352222.png" alt="用U命令将内存单元中的内容翻译为汇编指令显示"></p>
+<p>上图中，首先用E命令向从1000:0开始的内存单元中写入了8个字节的机器码；<br>然后用D命令查看内存1000:0~1000:1f的数据（从数据的角度看一下写入的内容）；<br>最后用U命令查看从1000:00开始的内存单元中的机器指令和它们所对应的汇编指令。</p>
+<p>U命令的显示输出分为3部分，每一条机器指令的地址、机器指令、机器指令所对应的汇编指令。我们可以看到：</p>
+<p>1000:0处存放的是写入的机器码b8 01 00所组成的机器指令，对应的汇编指令是mov ax.1;<br>1000:3处存放的是写入的机器码b9 02 00所组成的机器指令；对应的汇编指令是mov cx,2;<br>1000:6处存放的是写入的机器码01 c8所组成的机器指令；对应的汇编指令是add ax,cx;<br>1000:8处存放的是内存中机器码0所组成的机器指令；对应的汇编指令是add [bx+si],al</p>
+<p>由此，我们可以再一次看到内存中的数据和代码没有任何区别，关键在于如何解释。</p>
+<p>如何执行我们写入的机器指令呢？<br>使用Debug的T命令可以执行一条或多条指令，<br>简单地使用T命令，可以执行CS:IP指向的指令，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/24/FtkOPGhJHRfxTZ1.png" alt="使用T命令执行CS:IP指向的指令"></p>
+<p>上图中，首先用E命令向从1000:0开始的内存单元中写入8个字节的机器码；<br>然后用 R命令查看CPU中寄存器的状态，可以看到，CS=0740、IP=0100，指向内存0740:0100；<br>若要用T命令控制CPU执行我们写到1000:0的指令，必须先让CS:IP指向1000:0；<br>接着用R命令修改CS、IP中的内容，使CS:IP指向1000:0.</p>
+<p>完成上面的步骤后，就可以使用T命令来执行我们写入的指令了（此时，CS:IP指向我们的指令所在的内存单元）。<br>执行T命令后，CPU执行CS:IP指向的指令，则1000:0处的指令b8 01 00(mov ax,0001)得到执行，指令执行后，Debug显示输出CPU中寄存器的状态。</p>
+<p>注意，指令执行后，AX中的内容被改写为1，IP改变为IP+3（因为mov ax,0001的指令长度为3个字节），CS:IP指向下一条指令。</p>
+<p>接着上图，我们可以继续使用T命令执行下面的指令，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/24/i9utzWqFaO2vVJ6.png" alt="用T命令继续执行"></p>
+<p>在上图中，用T命令继续执行后面的指令，注意每条指令执行后，CPU相关寄存器内容的变化。</p>
+<h5 id="（8）用Debug的A命令以汇编指令的形式在内存中写入机器指令。"><a href="#（8）用Debug的A命令以汇编指令的形式在内存中写入机器指令。" class="headerlink" title="（8）用Debug的A命令以汇编指令的形式在内存中写入机器指令。"></a>（8）用Debug的A命令以汇编指令的形式在内存中写入机器指令。</h5><p>前面我们使用E命令写入机器指令，这样做很不方便，最好能直接以汇编指令的形式写入指令。<br>为此，Debug提供了A命令。<br>A命令的使用方法如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/24/5plaXKQTRHj6AEv.png" alt="用A命令向从1000:0开始的内存单元中写入指令"></p>
+<p>上图中，首先用A命令，以汇编语言向从1000:0开始的内存单元中写入了几条指令，<br>然后用D命令查看A命令的执行结果。<br>可以看到，在使用A命令写入指令时，我们输入的是汇编指令，Debug将这些汇编指令翻译为对应的机器指令，将它们的机器码写入内存。</p>
+<p>使用A命令写入汇编指令时，在给出的起始地址后直接按Enter键表示操作结束。</p>
+<p>如下图中，简单地使用A命令，从一个预设的地址开始输入指令</p>
+<p><img src="https://s2.loli.net/2023/01/24/XMEcDrg1HzQm4tW.png" alt="从一个预设的地址开始输入指令"></p>
+<blockquote>
+<p>本次实验中需要用到的命令</p>
+<p>查看、修改CPU中寄存器的内容：R命令</p>
+<p>查看内存中的内容：D命令</p>
+<p>修改内存中的内容：E命令（可以写入数据、指令，在内存中，它们实际上没有区别）</p>
+<p>将内存中的内容解释为机器指令和对应的汇编指令：U命令</p>
+<p>执行CS:IP指向的内存单元处的指令：T命令</p>
+<p>以汇编指令的形式向内存中写入指令：A命令</p>
+<p>在预备知识中，详细讲解了Debug的基本功能和用法。<br>在汇编语言的学习中，Debug是一个经常用到的工具，在学习预备知识中，应该一边看书一边在机器上操作。</p>
+<p>前面提到，我们的原则是：以后用到的，以后再说。<br>所以在这里只讲了一些在本次实验中需要用到的命令的相关的使用方法。<br>以后根据需要，我们会讲解其他的用法。</p>
+</blockquote>
+<h2 id="第3章-寄存器（内存访问）"><a href="#第3章-寄存器（内存访问）" class="headerlink" title="第3章 寄存器（内存访问）"></a>第3章 寄存器（内存访问）</h2><p>第2章中，我们主要从CPU如何执行指令的角度讲解了89086CPU的逻辑结构、形成物理地址的方法、相关的寄存器以及一些指令。<br>读者应在通过了前一章所有的检测点，并完成了实验任务之后，再开始学习当前的课程。<br>这一章中，我们从访问内存的角度继续学习几个寄存器。</p>
+<h4 id="3-1-内存中字的存储"><a href="#3-1-内存中字的存储" class="headerlink" title="3.1 内存中字的存储"></a>3.1 内存中字的存储</h4><p>CPU中，用16位寄存器来存储一个字。<br>高8位存放高位字节，低8位存放低位字节。<br>在内存中存储时，由于内存单元是字节单元（一个单元存放一个字节），则一个字要用两个地址连续的内存单元来存放，<br>这个字的低位字节存放在低地址单元中，高位字节存放在高地址单元中。</p>
+<p>我们用0、1两个内存单元存放数据20000（4E20H）。<br>0、1两个内存单元用来存储一个字，这两个单元可以看作一个起始地址为0的字单元（存放一个字的内存单元，由0、1两个字节单元组成）。<br>对于这个字单元来说，0号单元是低地址单元，1号单元是高地址单元，则字型数据4E20H的低位字节存放在0号单元中，高位字节存放在1号单元中。<br>同理，将2、3号单元看作一个字单元，它的起始地址为2。<br>在这个字单元中存放数据18（0012H），则在2号单元中存放低位字节12H，在3号单元中存放高位字节00H。</p>
+<p>我们提出字单元的概念：<br>字单元，即存放一个字型数据（16位）的内存单元，由两个地址连续的内存单元组成。|<br>高地址内存单元中存放字型数据的高位字节，低地址内存单元中存放字型数据的低位字节。</p>
+<p>在以后的课程中，我们将起始地址为N的字单元简称为N地址字单元。<br>比如一个字单元由2、3、两个内存单元组成，则这个字单元的起始地址为2，我们可以说这是2地址字单元。</p>
+<h4 id="3-2-DS和-address"><a href="#3-2-DS和-address" class="headerlink" title="3.2 DS和[address]"></a>3.2 DS和[address]</h4><p>CPU要读写一个内存单元的时候，必须先给出这个内存单元的地址，在8086PC中，内存地址由段地址和偏移地址组成。<br>8086CPU中有一个DS寄存器，通常用来存放要访问数据的段地址。<br>比如我们要读取10000H单元的内容，可以用如下的程序段进行。</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov bx,1000H
+mov ds,bx
+mov al,[0]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>上面的三条指令将10000H(1000:0)中的数据读到al中。</p>
+<p>下面详细说明指令的含义。</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov al,[0]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>前面我们使用mov指令，可完成两种传送：</p>
+<ol>
+<li>将数据直接送入寄存器；</li>
+<li>将一个寄存器中的内容送入另一个寄存器。</li>
+</ol>
+<p>也可以使用mov指令将一个内存单元中的内容送入一个寄存器中。<br>从哪一个内存单元送到哪一个寄存器中？<br>在指令中必须指明。<br>寄存器用寄存器名来指明，内存单元则需用内存单元的地址来指明。<br>显然，此时mov指令的格式应该是：mov 寄存器名，内存单元地址。</p>
+<p>“[…]”表示一个内存单元，“[…]”中的0表示内存单元的偏移地址。<br>我们知道，只有偏移地址是不能定位一个内存单元的，那么内存单元的段地址是多少呢？<br>指令执行时，8086CPU自动取ds中的数据为内存单元的段地址。</p>
+<p>再来看一下，如何用mov指令从10000H中读取数据。<br>10000H用段地址和偏移地址表示为1000:0，我们先将段地址1000H放入ds，然后用mov al,[0]完成传送。<br>mov指令中的[]说明操作对象是一个内存单元，[]中的0说明这个内存单元的偏移地址是0，它的段地址默认放在ds中，指令执行时，8086CPU会自动从ds中取出。</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov bx,1000H
+mov ds,bx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>若要用mov al,[0]完成数据从1000:0单元到al的传送，这条指令执行时，ds中的内容应为段地址1000H，所以在这条指令之前应该将1000H送入ds。</p>
+<p>如何把一个数据送入寄存器呢？<br>我们以前用类似“mov ax,1”这样的指令来完成，从理论上讲，我们可以用相似的方式：mov ds,1000H，来将1000H送入ds。<br>可是， 现实并非如此，8086CPU不支持将数据直接送入段寄存器的操作，ds是一个段寄存器，所以mov ds,1000H这条指令是非法的。<br>那么如何将1000H送入ds呢？<br>只好用一个寄存器来进行中转，即先将1000H送入一个一般的寄存器，如bx，再将bx中的内容送入ds。</p>
+<p>为什么8086CPU不支持将数据直接送入段寄存器的操作？<br>这属于8086CPU硬件设计的问题，我们只要知道这一点就行了。</p>
+<h4 id="3-3-字的传送"><a href="#3-3-字的传送" class="headerlink" title="3.3 字的传送"></a>3.3 字的传送</h4><p>前面我们用mov指令在寄存器和内存之间进行字节型数据的传送。<br>因为8086CPU是16位结构，有16根数据线，所以，可以一次性传送16位的数据，也就是说可以一次性传送一个字。<br>只要在mov指令中给出16位的寄存器就可以进行16位数据的传送了。<br>比如：c</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov bx,1000H
+mox ds,bx
+mov ax,[0]		;1000:0处的字型数据送到ax
+mov [0],cx		;cx中的16位数据送到1000:0处<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="3-4-mov、add、sub指令"><a href="#3-4-mov、add、sub指令" class="headerlink" title="3.4 mov、add、sub指令"></a>3.4 mov、add、sub指令</h4><p>前面我们用到了mov、add、sub指令，它们都带有两个操作对象。</p>
+<p>到现在，我们知道，mov指令可以有以下几种形式。</p>
+<p>mov 寄存器，数据					比如：mov ax,8<br>mov 寄存器，寄存器				比如：mov ax,bx<br>mov 寄存器，内存单元			比如：mov ax,[0]<br>mov 内存单元，寄存器			比如：mov [0],ax<br>mov 段寄存器，寄存器			比如：mov ds,ax</p>
+<p>我们可以根据这些已知指令进行下面的推测。</p>
+<ol>
+<li><p>既然有“mov 段寄存器，寄存器”，从寄存器向段寄存器传送数据，那么也应该有“mov 寄存器，段寄存器”，从段寄存器向寄存器传送数据。<br>一个合理的设想是：80986CPU内部有寄存器到段寄存器的通路，那么也应该有相反的道路。</p>
+<p>有了推测，我们还要验证一下。进入Debug，用A命令，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/25/wcGhIkUxosTRpKg.png" alt="试验mov ax,ds"></p>
+</li>
+</ol>
+<p>上图中，用A命令在一个预设的地址0740:0100处，用汇编的形式mov ax,ds写入指令，再用T命令执行，可以看到执行的结果，段寄存器ds中的值送到了寄存器ax中。<br>通过验证我们知道，“mov 寄存器，段寄存器”是正确的指令。</p>
+<ol start="2">
+<li><p>既然有“mov 内存单元，寄存器”，从寄存器向内存单元传送数据，那么也应该有“mov 内存单元，段寄存器”，从段寄存器向内存单元传送数据。<br>比如我们可以将段寄存器cs中的内容送入内存10000H处，指令如下。</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov ax,1000H
+mov ds,ax
+mov [0],cs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>在Debug中进行试验，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/25/MCjZnKoIdScJm2G.png"></p>
+</li>
+</ol>
+<p><img src="https://s2.loli.net/2023/01/25/BWIoU6M4CFXYPTL.png" alt="试验mov [0],cs"></p>
+<p>上图中，当CS:IP指向0740:0105的时候，Debug显示当前的指令mov [0000],cs，因为这是一条访问内存的指令，Debug还显示出指令要访问的内存单元中的内容。<br>由于指令中的CS是一个16位寄存器，所以要访问（写入）的内存单元是一个字单元，它的偏移地址为0，段地址在ds中，Debug在屏幕右边显示出“DS:0000=0000”，我们可以知道这个字单元中的内容为0、</p>
+<p>mov [0000],cs执行后，CS中的数据（0740H）被写入1000:0处，1000:1单元存放07H，1000:00单元存放40H。</p>
+<p>最后，用D命令从1000:0开始查看指令执行后 内存中的情况，注意1000:0、1000:1两个单元的内容。</p>
+<ol start="3">
+<li><p>“mov 段寄存器，内存单元”也应该可行，比如我们可以用10000H处存放的字型数据设置ds（即将10000H处存放的字型数据送入ds），指令如下。</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov ax,1000H
+mov ds,ax
+mov ds,[0]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>可以自行在Debug中进行试验。</p>
+<p>add和sub指令同mov一样，都有两个操作对象。它们也可以有以下几种形式。</p>
+<p>add 寄存器，数据			比如：add ax,8<br>add 寄存器，寄存器		比如：add ax,bx<br>add 寄存器，内存单元	比如：add ax,[0]<br>add 内存单元，寄存器	比如：add [0],ax<br>sub 寄存器，数据			比如：sub ax,9<br>sub 寄存器，寄存器		比如：sub ax,bx<br>sub 寄存器，内存单元	比如：sub ax,[0]<br>sub 内存单元，寄存器	比如：sub [0],ax</p>
+</li>
+</ol>
+<h4 id="3-5-数据段"><a href="#3-5-数据段" class="headerlink" title="3.5 数据段"></a>3.5 数据段</h4><p>前面讲过，对于8086PC机，在编程时，可以根据需要，将一组内存单元定义为一个段。<br>我们可以将一组内存长度为N（N≤64KB）、地址连续、起始地址为16的倍数的内存单元当作专门存储数据的内存空间，从而定义了一个数据段。<br>比如用123B0H<del>123B9H这段内存空间来存放数据，我们就可以人物，123B0H</del>123B9H这段内存是一个数据段，它的段地址为123BH，长度为10个字节。</p>
+<p>如何访问数据段中的数据呢？将一端内存当作数据段，是我们在编程时的一种安排，可以在具体操作的时候，用ds存放数据段的段地址，再根据需要，用相关指令访问数据段中的具体单元。</p>
+<p>比如，将123B0H~123B9H的内存单元定义为数据段。<br>现在要累加这个数据段中的前3个单元中的数据，代码如下。</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov ax,123BH
+mov ds,ax			;将123BH送入ds中，作为数据段的段地址
+mov al,0			;用al存放累加结果
+add al,[0]			;将数据段第一个单元（偏移地址为0）中的数值加到al中
+add al,[1]			;将数据段第二个单元（偏移地址为1）中的数值加到al中
+add al,[2]			;将数据段第三个单元（偏移地址为2）中的数值加到al中<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>3.1~3.5 小结</p>
+<ol>
+<li>字在内存中存储时，要用两个地址连续的内存单元来存放，字的低位字节存放在低地址单元中，高位字节存放在高地址单元中。</li>
+<li>用mov指令访问内存单元，可以在mov指令中只给出单元的偏移地址自，此时，段地址默认在DS寄存器中。</li>
+<li>[address]表示一个偏移地址为address的内存单元。</li>
+<li>在内存和寄存器之间传送字型数据，高地址单元和高8位寄存器、低地址单元和低8位寄存器相对应。</li>
+<li>mov、add、sub是具有两个操作对象的指令。jmp是具有一个操作对象的指令。</li>
+<li>可以根据自己的推测，在Debug中实验指令的新格式。</li>
+</ol>
+</blockquote>
+<h4 id="3-6-栈"><a href="#3-6-栈" class="headerlink" title="3.6 栈"></a>3.6 栈</h4><p>在这里，我们对栈的研究仅限于这个角度：栈是一种具有特殊的访问方式的存储空间。<br>它的特殊性在于，最后进入这个空间的数据，最先出去。</p>
+<p><img src="https://s2.loli.net/2023/01/26/tGlmiOa67CBR29p.png" alt="入栈的方式"></p>
+<p>现在的问题是，一次只允许取一本，我们如何将3本书从盒子中取出来？</p>
+<p>显然，必须从盒子的最上边取。<br>这样取出的顺序就是：《软件工程》、《C语言》、《高等数学》，和放入的顺序相反，如下图所示。</p>
+<p><img src="https://s2.loli.net/2023/01/26/mc5lSzu6gkUKINe.png" alt="出栈的方式"></p>
+<p>从程序化的角度来讲，应该有一个标记，这个标记一直指示着盒子最上边的书。</p>
+<p>如果说，上例中的盒子就是一个栈，我们可以看出，栈有两个基本的操作：入栈和出栈。<br>入栈就是将一个新的元素放到栈顶，出栈就是从栈顶取出一个元素。<br>栈顶的元素总是最后入栈，需要出栈，又最先被从栈中取出。<br>栈的这种操作规则被称为：LIFO（Last In First Out，后进先出）。</p>
+<h4 id="3-7-CPU提供的栈机制"><a href="#3-7-CPU提供的栈机制" class="headerlink" title="3.7 CPU提供的栈机制"></a>3.7 CPU提供的栈机制</h4><p>现今的CPU中都有栈的设计就，8086CPU也不例外。<br>8086CPU提供相关的指令来以栈的方式访问内存空间。<br>这意味着，在基于8086CPU编程的时候，可以将一端内存当作栈来使用。</p>
+<p>8086CPU提供入栈和出栈指令，最基本的两个是PUSH（入栈）和POP（出栈）。<br>比如，push ax表示将寄存器ax中的数据送入栈中，pop ax表示从栈顶取出数据送入ax。<br>8086CPU的入栈和出栈操作都是以字为单位进行的。</p>
+<p>下面距离说明，我们可以将10000H~1000FH这段内存当作栈来使用。</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov ax,0123H
+push ax
+mov bx,2266H
+push bx
+mov cx,1122H
+push cx
+pop ax
+pop bx
+pop cx<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意，字型数据用两个单元存放，高地址单元存放高8位，低地址单元存放低8位。</p>
+<p>一些问题：</p>
+<p>其一，我们10000H<del>1000FH这段内存当作栈来使用，CPU执行push和pop指令时，将对这段空间按照栈的后进先出的规则进行访问。<br>但是，一个重要的问题是，CPU如何知道10000H</del>1000FH这段空间被当作栈来使用？</p>
+<p>其二，push ax等入栈指令执行时，要将寄存器中的内容放入当前栈顶单元的上方，成为新的栈顶元素；pop ax等指令执行时，要从栈顶单元中取出数据，送入寄存器中。<br>显然，push、pop在执行的时候，必须知道哪个单元是栈顶单元，可是，如何知道呢？</p>
+<p>这不禁让我们想起另外一个讨论过的问题，就是，CPU如何知道当前要执行的指令所在的位置？<br>我们现在知道答案，那就是CS、IP中存放着当前指令的段地址和偏移地址。<br>现在的问题是：CPU如何知道栈顶的位置？<br>显然，也应该有相应的寄存器来存放栈顶的地址，8086CPU中，有两个寄存器，段寄存器SS和寄存器SP，栈顶的段地址存放在SS中，偏移地址存放在SP。<br><strong>任意时刻，SP:SP指向栈顶元素</strong>。push指令和pop指令执行时，CPU从SS和SP中得到栈顶的地址。</p>
+<p>现在，我们可以完整地描述push和pop指令的功能了，例如push ax。</p>
+<p>push ax的执行，由以下两步完成。</p>
+<ol>
+<li>SP=SP-2，SS:SP指向当前栈顶前面的单元，以当前栈顶前面的单元为新的栈顶；</li>
+<li>将ax中的内容送入SS:SP指向的内存单元处，SS:SP此时指向新栈顶。</li>
+</ol>
+<p>pop ax的执行过程和push ax刚好相反，由以下两步完成。</p>
+<ol>
+<li>将SS:SP指向的内存单元处的数据送入ax中；</li>
+<li>SP=SP+2，SS:SP指向当前栈顶下面的单元，以当前栈顶下面的单元为新的栈顶。</li>
+</ol>
+<h4 id="3-8-栈顶超界的问题"><a href="#3-8-栈顶超界的问题" class="headerlink" title="3.8 栈顶超界的问题"></a>3.8 栈顶超界的问题</h4><p>我们现在知道，8086CPU用SS和SP指示栈顶的地址，并提供push和pop指令实现入栈和出栈。</p>
+<p>但是，还有一个问题需要讨论，就是SS和SP只是记录了栈顶的地址，依靠SS和SP可以保证在入栈和出栈时找到栈项。<br>可是，如何能够保证在入栈、出栈时，栈顶不会超出栈空间？</p>
+<p>当栈满的时候再使用push指令入栈，或栈空的时候再使用pop指令出栈，都将发生栈顶超界问题。</p>
+<p>栈顶超界是危险的，因为我们依然将一段空间安排为栈，那么在栈空间之外的空间里很可能存放了具有其他用途的数据、代码等，这些数据、代码可能是我们自己程序中的，也可能是别的程序中的（毕竟一个计算机系统中并不是只有我们自己的程序在运行）。但是由于我们在入栈出栈时的不小心，而将这些数据、代码以外的改写，将会引发一连串的错误。</p>
+<p>我们当然希望CPU可以帮我们解决这个问题，比如说在CPU中有记录栈顶上限和栈底的寄存器，我们可以通过填写这些寄存器来指定栈空间的范围，然后，CPU在执行push指令的时候靠检测栈顶上限寄存器、在执行pop指令的时候靠检测栈底寄存器保证不会超界。</p>
+<p>不过，对于8086CPU，这只是我们的一个设想（我们当然可以这样设想，如果CPU是我们设计的话，这也就不仅仅是一个设想）。实际的情况是，8086CPU并没有这样的寄存区，</p>
+<p>8086CPU不保证我们对栈的操作不会超界。<br>这也就是说，8086CPU只知道栈顶在何处（由SS:SP指示），而不知道我们安排的栈空间有多大。<br>这点就好像CPU只知道当前要执行的指令在何处（由CS:IP指示），而不知道要执行的指令有多少。<br>从这两点上我们可以看出8086CPU的工作机理，它只考虑当前的情况：<br>当前的栈顶在何处、当前要执行的指令是哪一条。</p>
+<p>我们在编程的时候要自己操心栈顶超界的问题，要根据可能用到的最大栈空间，来安排栈的大小，防止入栈的数据太多而导致的超界；执行出栈操作的时候也要注意，以防栈空的时候继续出栈而导致的超界。</p>
+
                 
             </div>
             <hr/>
@@ -1484,18 +1686,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/01/19/hui-bian-yu-yan-du-shu-bi-ji/">
+                <a href="/2023/04/30/mou-ge-pao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="读书笔记-《汇编语言》">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="冒个泡">
                         
-                        <span class="card-title">读书笔记-《汇编语言》</span>
+                        <span class="card-title">冒个泡</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1505,27 +1706,26 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-01-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-30
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    学习
+                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
+                                    日常
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">读书笔记</span>
+                    <a href="/tags/%E5%88%92%E6%B0%B4/">
+                        <span class="chip bg-color">划水</span>
                     </a>
                     
                 </div>
@@ -1777,7 +1977,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.5k</span>&nbsp;字
+                class="white-color">16.8k</span>&nbsp;字
             
             
             
