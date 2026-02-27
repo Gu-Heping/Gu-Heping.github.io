@@ -1,17 +1,121 @@
-﻿/* Custom overrides for Gu's Home — NexT Gemini */
+﻿/* =====================================================
+   Gu's Home  NexT Gemini Glassmorphism Theme
+   ===================================================== */
 
-/* Custom font */
+/* 1. 自定义字体 */
 @font-face {
     font-family: 'myFont';
     src: url('/font/myFont.ttf');
 }
-body,
-.post-body {
+body, .post-body {
     font-family: 'myFont', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f0f0f0; }
-::-webkit-scrollbar-thumb { background: #b0b0b0; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #888; }
+/* 2. 全局背景壁纸 */
+body {
+    background: url('/medias/banner/0.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* 3. 毛玻璃卡片基础样式 */
+.header-inner,
+.sidebar-inner,
+.post-block,
+.comments,
+.pagination {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
+    transition: all 0.3s ease;
+}
+
+/* 4. 卡片悬浮动效 */
+.post-block:hover,
+.sidebar-inner:hover,
+.header-inner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* 5. 隐藏 NexT 默认的纯色背景和边框 */
+.content-wrap {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+.post-block {
+    margin-bottom: 24px;
+    padding: 40px !important;
+}
+
+/* 6. 菜单与按钮美化 */
+.menu-item a {
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+.menu-item a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+.btn {
+    border-radius: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    border: none;
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
+    transition: all 0.3s;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(118, 75, 162, 0.4);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* 7. 滚动条美化 */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.2); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.4); }
+
+/* 8. 选中文字高亮 */
+::selection {
+    background: rgba(102, 126, 234, 0.4);
+    color: inherit;
+}
+
+/* =====================================================
+   深色模式适配 (Dark Mode)
+   ===================================================== */
+@media (prefers-color-scheme: dark) {
+    /* 深色模式下给背景图加一层暗色遮罩，保护视力 */
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/medias/banner/0.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    /* 深色毛玻璃卡片 */
+    .header-inner,
+    .sidebar-inner,
+    .post-block,
+    .comments,
+    .pagination {
+        background: rgba(30, 30, 30, 0.75) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .post-block:hover,
+    .sidebar-inner:hover,
+    .header-inner:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .menu-item a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); }
+    ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); }
+}
