@@ -17,8 +17,13 @@ body {
     background-size: cover;
 }
 
+/* 新增：防止卡片贴顶，为主内容区增加顶部间距 */
+.main {
+    margin-top: 40px;
+}
+
 /* 3. 毛玻璃卡片基础样式 */
-.header-inner,
+.header,
 .sidebar-inner,
 .post-block,
 .comments,
@@ -30,12 +35,18 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
     transition: all 0.3s ease;
+    overflow: hidden; /* 确保内部元素不会溢出圆角 */
+}
+
+/* 修复左上角品牌区域的方角问题 */
+.site-brand-container {
+    border-radius: 16px 16px 0 0;
 }
 
 /* 4. 卡片悬浮动效 */
 .post-block:hover,
 .sidebar-inner:hover,
-.header-inner:hover {
+.header:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
 }
@@ -84,6 +95,58 @@ body {
     color: inherit;
 }
 
+/* 9. Mac OS 风格代码块 */
+figure.highlight {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+figure.highlight::before {
+    content: " ";
+    display: block;
+    height: 30px;
+    background: #f1f3f4;
+    border-radius: 8px 8px 0 0;
+    background-image: radial-gradient(#fc625d 6px, transparent 7px),
+                      radial-gradient(#fdbc40 6px, transparent 7px),
+                      radial-gradient(#35cd4b 6px, transparent 7px);
+    background-size: 36px 30px;
+    background-position: 12px center, 32px center, 52px center;
+    background-repeat: no-repeat;
+}
+
+/* 10. 胶囊样式标签 */
+.tag-cloud-tags a, .post-tags a {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 4px;
+    border-radius: 20px;
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea !important;
+    font-size: 0.85em;
+    transition: all 0.3s;
+    border-bottom: none !important;
+}
+.tag-cloud-tags a:hover, .post-tags a:hover {
+    background: #667eea;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+/* 11. 彩色社交图标 */
+.links-of-author-item a {
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.links-of-author-item a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+.links-of-author-item a::before {
+    display: none; /* 隐藏默认的圆点 */
+}
+
 /* =====================================================
    深色模式适配 (Dark Mode)
    ===================================================== */
@@ -95,7 +158,7 @@ body {
     }
     
     /* 深色毛玻璃卡片 */
-    .header-inner,
+    .header,
     .sidebar-inner,
     .post-block,
     .comments,
@@ -107,7 +170,7 @@ body {
     
     .post-block:hover,
     .sidebar-inner:hover,
-    .header-inner:hover {
+    .header:hover {
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5) !important;
     }
 
@@ -118,4 +181,18 @@ body {
     ::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); }
     ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); }
     ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); }
+
+    /* 深色模式图片调暗，保护视力 */
+    img {
+        filter: brightness(0.8);
+        transition: filter 0.3s;
+    }
+    img:hover {
+        filter: brightness(1);
+    }
+
+    /* 深色模式 Mac OS 代码块头部 */
+    figure.highlight::before {
+        background-color: #2d2d2d;
+    }
 }

@@ -1,0 +1,54 @@
+<!-- ==============================================
+     1. APlayer & MetingJS (全局迷你音乐播放器)
+     ============================================== -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<!-- 歌单ID可自行替换，目前是一个网易云轻音乐歌单 -->
+<meting-js 
+  server="netease" 
+  type="playlist" 
+  id="3171133954" 
+  fixed="true" 
+  autoplay="false" 
+  loop="all" 
+  order="random" 
+  preload="auto" 
+  list-folded="true" 
+  lrc-type="0"
+  theme="#667eea">
+</meting-js>
+
+<!-- ==============================================
+     2. 鼠标点击特效 (浮动彩色爱心)
+     ============================================== -->
+<script>
+!function(e,t,a){function n(){c(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);z-index:99999;pointer-events:none;}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),o(),r()}function r(){for(var e=0;e<d.length;e++)d[e].alpha<=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText="left:"+d[e].x+"px;top:"+d[e].y+"px;opacity:"+d[e].alpha+";transform:scale("+d[e].scale+","+d[e].scale+") rotate(45deg);background:"+d[e].color+";z-index:99999;pointer-events:none");requestAnimationFrame(r)}function o(){var t="function"==typeof e.onclick&&e.onclick;e.onclick=function(e){t&&t(),i(e)}}function i(e){var a=t.createElement("div");a.className="heart",d.push({el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()}),t.body.appendChild(a)}function c(e){var a=t.createElement("style");a.type="text/css";try{a.appendChild(t.createTextNode(e))}catch(t){a.styleSheet.cssText=e}t.getElementsByTagName("head")[0].appendChild(a)}function s(){return"rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"}var d=[];e.requestAnimationFrame=function(){return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,1e3/60)}}(),n()}(window,document);
+</script>
+
+<!-- ==============================================
+     3. 侧边栏动态打字机特效 (Typed.js)
+     ============================================== -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const subtitle = document.querySelector('.site-subtitle');
+    if (subtitle) {
+      subtitle.innerHTML = '<span id="typed-subtitle"></span>';
+      new Typed('#typed-subtitle', {
+        strings: [
+          '沧海一粟，亦有光芒',
+          'Keep looking forward',
+          '保持热爱，奔赴山海',
+          'Stay Hungry, Stay Foolish'
+        ],
+        typeSpeed: 100,      // 打字速度
+        backSpeed: 50,       // 回退速度
+        backDelay: 2000,     // 停留时间
+        loop: true,          // 循环播放
+        showCursor: true,    // 显示光标
+        cursorChar: '|'      // 光标样式
+      });
+    }
+  });
+</script>

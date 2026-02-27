@@ -1,0 +1,31 @@
+<!-- ==============================================
+     4. 底部网站运行时间计时器
+     ============================================== -->
+<div class="run-time" style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+  <i class="fa fa-clock-o"></i> <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+</div>
+
+<script>
+    var now = new Date(); 
+    // 自定义您的建站时间，基于您第一篇文章（2022/10/01）
+    function createtime() { 
+        var grt= new Date("02/28/2026 00:00:00"); 
+        now.setTime(now.getTime()+250); 
+        var days = (now - grt ) / 1000 / 60 / 60 / 24; var dnum = Math.floor(days); 
+        var hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); var hnum = Math.floor(hours); 
+        if(String(hnum).length == 1 ){hnum = "0" + hnum;} 
+        var minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); var mnum = Math.floor(minutes); 
+        if(String(mnum).length == 1 ){mnum = "0" + mnum;} 
+        var seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); var snum = Math.round(seconds); 
+        if(String(snum).length == 1 ){snum = "0" + snum;} 
+        
+        let timeDateElem = document.getElementById("timeDate");
+        let timesElem = document.getElementById("times");
+        
+        if(timeDateElem && timesElem) {
+            timeDateElem.innerHTML = "本站已稳定运行 " + dnum + " 天 "; 
+            timesElem.innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        }
+    } 
+    setInterval('createtime()', 250);
+</script>
