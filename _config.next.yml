@@ -77,10 +77,11 @@ creative_commons:
   language:
 
 # ---------------------------------------------------------------
-# Custom Style (inject my.css)
+# Custom Style & Inject
 # ---------------------------------------------------------------
 custom_file_path:
   style: source/css/my.css
+  postBodyEnd: source/_data/post-body-end.njk
 
 # ---------------------------------------------------------------
 # Reading Progress Bar
