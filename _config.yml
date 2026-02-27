@@ -82,7 +82,7 @@ exclude:
 ignore:
 
 # Extensions
-theme: matery
+theme: next
 
 # Deployment
 deploy:

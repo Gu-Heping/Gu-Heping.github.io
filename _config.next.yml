@@ -1,0 +1,153 @@
+# NexT Theme Configuration Override
+# Only settings that differ from theme defaults are listed here.
+# Full docs: https://theme-next.js.org
+
+# ---------------------------------------------------------------
+# Theme Scheme
+# ---------------------------------------------------------------
+scheme: Gemini
+
+# Dark Mode
+darkmode: true
+
+# ---------------------------------------------------------------
+# Menu
+# ---------------------------------------------------------------
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  categories: /categories/ || fa fa-bookmark
+  tags: /tags/ || fa fa-tags
+  about: /about/ || fa fa-user
+
+menu_settings:
+  icons: true
+  badges: true
+
+# ---------------------------------------------------------------
+# Sidebar
+# ---------------------------------------------------------------
+sidebar:
+  position: left
+  display: post
+  padding: 18
+  offset: 12
+
+# Sidebar Avatar
+avatar:
+  url: /medias/avatar.jpg
+  rounded: true
+  rotated: false
+
+# ---------------------------------------------------------------
+# Social Links
+# ---------------------------------------------------------------
+social:
+  GitHub: https://github.com/Gu-Heping || fab fa-github
+  E-Mail: mailto:yue76093219@126.com || fa fa-envelope
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: true
+
+# ---------------------------------------------------------------
+# Footer
+# ---------------------------------------------------------------
+footer:
+  since: 2022
+  icon:
+    name: fa fa-heart
+    animated: true
+    color: "#ff0000"
+  copyright:
+  powered: false
+
+# ---------------------------------------------------------------
+# Post Settings
+# ---------------------------------------------------------------
+# Tag Icon
+tag_icon: true
+
+# Creative Commons
+creative_commons:
+  license: by-nc-sa
+  sidebar: false
+  post: true
+  language:
+
+# ---------------------------------------------------------------
+# Custom Style (inject my.css)
+# ---------------------------------------------------------------
+custom_file_path:
+  style: source/css/my.css
+
+# ---------------------------------------------------------------
+# Reading Progress Bar
+# ---------------------------------------------------------------
+reading_progress:
+  enable: true
+  start_at: top
+  position: top
+  reversed: false
+  color: "#37c6c0"
+  height: 3px
+
+# Back to Top
+back2top:
+  enable: true
+  sidebar: false
+  scrollpercent: true
+
+# ---------------------------------------------------------------
+# Busuanzi Count (page views)
+# ---------------------------------------------------------------
+busuanzi_count:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: fa fa-user
+  total_views: true
+  total_views_icon: fa fa-eye
+  post_views: true
+  post_views_icon: far fa-eye
+
+# ---------------------------------------------------------------
+# Local Search
+# Requires: hexo-generator-search (already installed)
+# ---------------------------------------------------------------
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+  unescape: false
+  preload: false
+
+# ---------------------------------------------------------------
+# Code Block
+# ---------------------------------------------------------------
+codeblock:
+  theme:
+    light: default
+    dark: stackoverflow-dark
+  copy_button:
+    enable: true
+    style: default
+
+# ---------------------------------------------------------------
+# Animation
+# ---------------------------------------------------------------
+motion:
+  enable: true
+  async: false
+  transition:
+    sidebar: fadeInDown
+    body: fadeInDown
+    footer: fadeInDown
+
+# ---------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------
+fancybox: false
+mediumzoom: false
+lazyload: false
+pangu: false
