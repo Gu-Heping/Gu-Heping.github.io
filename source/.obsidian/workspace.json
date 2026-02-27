@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/hello.md",
+                "file": "_posts/测试文章.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "hello"
+              "title": "测试文章"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/hello.md",
+                "file": "_posts/测试文章.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "hello 的反向链接列表"
+              "title": "测试文章 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/hello.md",
+                "file": "_posts/测试文章.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "hello 的出链列表"
+              "title": "测试文章 的出链列表"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/hello.md",
+                "file": "_posts/测试文章.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "hello 的大纲"
+              "title": "测试文章 的大纲"
             }
           }
         ]
@@ -185,7 +185,11 @@
   },
   "active": "c02cd699b32a174a",
   "lastOpenFiles": [
-    "404/index.md",
-    "_posts/hello.md"
+    "未命名.canvas",
+    "_posts/测试文章.md",
+    "_posts/hello.md",
+    "00_Templates/HEXO模板.md",
+    "00_Templates",
+    "404/index.md"
   ]
 }
