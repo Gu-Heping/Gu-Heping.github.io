@@ -1,0 +1,690 @@
+<!DOCTYPE html><!-- 默认采用 Omori 配色 --><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://peace0824.top/omori-photo-album/"><!-- 基础 SEO --><title>Basil&#39;s Memories | Peace&#39;s Home</title><meta name="description" content="OMORI Basil Photo Album（排除 The Truth）"><meta name="robots" content="index, follow"><meta property="og:title" content="Basil's Memories | Peace's Home"><meta property="og:description" content="OMORI Basil Photo Album（排除 The Truth）"><meta property="og:url" content="https://peace0824.top/omori-photo-album/"><meta property="og:site_name" content="Peace's Home"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="website"><meta property="og:image" content="https://peace0824.top/images/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Basil's Memories | Peace's Home"><meta name="twitter:description" content="OMORI Basil Photo Album（排除 The Truth）"><meta name="twitter:image" content="https://peace0824.top/images/og-image.png"><link rel="icon" type="image/jpeg" href="/logo.jpg"><link rel="apple-touch-icon" href="/logo.jpg"><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml"><meta name="view-transition" content="same-origin"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/assets/ClientRouter.astro_astro_type_script_index_0_lang.CDGfc0hd.js"></script><!-- 暗黑模式与主题读取脚本 --><script>
+      (function() {
+        function readThemeState() {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          return {
+            shouldDark: stored === 'dark' || (!stored && prefersDark),
+          };
+        }
+
+        function applyThemeStateTo(docEl, state) {
+          if (!docEl) return;
+          docEl.classList.toggle('dark', state.shouldDark);
+        }
+
+        function applyThemeState() {
+          applyThemeStateTo(document.documentElement, readThemeState());
+        }
+
+        applyThemeState();
+        document.addEventListener('astro:before-swap', function(evt) {
+          var state = readThemeState();
+          var nextDoc = evt && evt.newDocument ? evt.newDocument : evt && evt.detail && evt.detail.newDocument;
+          if (nextDoc && nextDoc.documentElement) {
+            applyThemeStateTo(nextDoc.documentElement, state);
+          }
+          applyThemeStateTo(document.documentElement, state);
+        });
+        document.addEventListener('astro:page-load', applyThemeState);
+      })();
+    </script><link rel="stylesheet" href="/assets/omori-photo-album.DoJne_XS.css">
+<link rel="stylesheet" href="/assets/index.BR4MUeRr.css">
+<style>.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style></head> <body class="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 transition-colors duration-300 selection:bg-primary/20 dark:selection:bg-primary/30">   <div class="fixed inset-0 z-0 pointer-events-none"> <!-- 与首页统一：全屏背景层 + 轻蒙版，主内容通过 pt 留出导航安全区 --> <div class="absolute inset-x-0 top-0 h-[100svh] overflow-hidden"> <div class="absolute inset-0 bg-[url('/images/hero-mobile-light.webp')] dark:bg-[url('/images/hero-mobile-dark.webp')] md:bg-[url('/images/hero-light.webp')] md:dark:bg-[url('/images/hero-dark.png')] bg-cover bg-center md:bg-[center_15%] transition-all duration-500"></div> <!-- 底部边缘衔接渐变，柔和过渡到下方纯色 --> <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-50 to-transparent dark:from-slate-950 dark:to-transparent"></div> </div> <!-- 防干扰垫层：使用一层 85% 不透明度的亮色/暗色蒙版，覆盖全屏幕 --> <div class="absolute inset-0 bg-slate-50/85 dark:bg-slate-950/85 transition-colors duration-500"></div> </div> <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-xl bg-slate-50/88 dark:bg-slate-950/84 border-b border-slate-200/70 dark:border-slate-800/70 shadow-sm shadow-slate-900/5 dark:shadow-black/20"> <nav class="container max-w-4xl mx-auto px-3 md:px-6 py-2.5 md:py-5 flex justify-between items-center gap-2 md:gap-4"> <a href="/" class="shrink-0 truncate max-w-[44vw] text-base md:text-xl font-bold tracking-tight hover:text-primary-ink transition-colors">Peace&#39;s Home</a> <div class="hidden min-w-0 md:flex items-center justify-end gap-6 text-sm font-medium overflow-x-auto whitespace-nowrap no-scrollbar"> <a href="/" class="px-1 transition-colors text-slate-700 dark:text-slate-200 hover:text-primary-ink dark:hover:text-primary-ink"> 首页 </a><a href="/blog" class="px-1 transition-colors text-slate-700 dark:text-slate-200 hover:text-primary-ink dark:hover:text-primary-ink"> 博客 </a><a href="/music" class="px-1 transition-colors text-slate-700 dark:text-slate-200 hover:text-primary-ink dark:hover:text-primary-ink"> 音乐 </a><a href="/omori-photo-album/" class="px-1 transition-colors text-primary-ink dark:text-primary" aria-current="page"> 相册 </a><a href="/mumble" class="px-1 transition-colors text-slate-700 dark:text-slate-200 hover:text-primary-ink dark:hover:text-primary-ink"> 碎碎念 </a><a href="/tags" class="px-1 transition-colors text-slate-700 dark:text-slate-200 hover:text-primary-ink dark:hover:text-primary-ink"> 标签 </a><a href="/guestbook" class="px-1 transition-colors text-slate-700 dark:text-slate-200 hover:text-primary-ink dark:hover:text-primary-ink"> 留言板 </a><a href="/friends" class="px-1 transition-colors text-slate-700 dark:text-slate-200 hover:text-primary-ink dark:hover:text-primary-ink"> 友链 </a><a href="/about" class="px-1 transition-colors text-slate-700 dark:text-slate-200 hover:text-primary-ink dark:hover:text-primary-ink"> 关于 </a> <!-- 使用 client:load 保证水合后可交互 --> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z1T7Gv2" prefix="r6" component-url="/assets/ThemeToggle.DMxYD1yK.js" component-export="default" renderer-url="/assets/client.DKx3p5Vh.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children><button class="p-2 rounded-full text-slate-600 dark:text-slate-400 hover:text-primary-ink dark:hover:text-primary-ink hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Theme" title="Toggle Theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></button><!--astro:end--></astro-island> </div> <div class="flex items-center gap-2 md:hidden"> <astro-island uid="Z1T7Gv2" prefix="r7" component-url="/assets/ThemeToggle.DMxYD1yK.js" component-export="default" renderer-url="/assets/client.DKx3p5Vh.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children><button class="p-2 rounded-full text-slate-600 dark:text-slate-400 hover:text-primary-ink dark:hover:text-primary-ink hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Theme" title="Toggle Theme"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></button><!--astro:end--></astro-island> <details class="relative" data-mobile-nav> <summary class="list-none inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-slate-200/80 bg-white/75 text-slate-700 hover:bg-white dark:border-slate-700/80 dark:bg-slate-900/70 dark:text-slate-200 dark:hover:bg-slate-900" aria-label="打开导航菜单"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5" aria-hidden="true"> <path d="M4 7h16M4 12h16M4 17h16"></path> </svg> </summary> <div class="absolute right-0 mt-2 w-40 overflow-hidden rounded-xl border border-slate-200/80 bg-white/95 p-1 shadow-lg dark:border-slate-700/80 dark:bg-slate-900/95"> <a href="/" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70" data-mobile-nav-link> 首页 </a><a href="/blog" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70" data-mobile-nav-link> 博客 </a><a href="/music" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70" data-mobile-nav-link> 音乐 </a><a href="/omori-photo-album/" class="block rounded-lg px-3 py-2 text-sm bg-primary/15 text-primary-ink dark:bg-primary/20 dark:text-primary" data-mobile-nav-link aria-current="page"> 相册 </a><a href="/mumble" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70" data-mobile-nav-link> 碎碎念 </a><a href="/tags" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70" data-mobile-nav-link> 标签 </a><a href="/guestbook" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70" data-mobile-nav-link> 留言板 </a><a href="/friends" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70" data-mobile-nav-link> 友链 </a><a href="/about" class="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800/70" data-mobile-nav-link> 关于 </a> </div> </details> </div> </nav> </header> <script>
+  (function () {
+    function getMobileNav() {
+      return document.querySelector('[data-mobile-nav]');
+    }
+    function closeMobileNav() {
+      var details = getMobileNav();
+      if (details instanceof HTMLDetailsElement) details.open = false;
+    }
+    document.addEventListener('click', function (evt) {
+      var target = evt.target;
+      if (!(target instanceof Element)) return;
+      if (target.closest('[data-mobile-nav-link]')) {
+        closeMobileNav();
+        return;
+      }
+      var details = getMobileNav();
+      if (!(details instanceof HTMLDetailsElement) || !details.open) return;
+      if (!target.closest('[data-mobile-nav]')) closeMobileNav();
+    });
+    document.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Escape') closeMobileNav();
+    });
+    document.addEventListener('astro:page-load', closeMobileNav);
+  })();
+</script> <main class="container relative z-10 max-w-4xl mx-auto px-4 md:px-6 pt-24 pb-8 md:pt-32 md:pb-12 min-h-[70vh]">  <div class="album-stage" data-album-stage data-astro-cid-wostqwtb> <button type="button" class="album-stage-nav album-stage-nav-prev hidden" data-stage-prev aria-label="上一页" data-astro-cid-wostqwtb> <img src="/images/omori-albums/ui/acs-arrows/ACSArrows_left.png" alt="" aria-hidden="true" data-astro-cid-wostqwtb> </button> <button type="button" class="album-stage-nav album-stage-nav-next hidden" data-stage-next aria-label="下一页" data-astro-cid-wostqwtb> <img src="/images/omori-albums/ui/acs-arrows/ACSArrows_right.png" alt="" aria-hidden="true" data-astro-cid-wostqwtb> </button> <!-- Faraway Album（浅色模式） --> <section class="block" data-theme-branch="light" data-astro-cid-wostqwtb> <div class="album-shell" data-astro-cid-wostqwtb> <article class="album-page " data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb>  <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="eager" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_01.png" alt="" loading="eager" decoding="async" data-caption-index="0" data-caption-branch="faraway" data-caption-text="(12/25 - CHRISTMAS): My first photo! It's my best friend, Sunny, trying out his new violin. He's starting to take lessons again so he can play at recitals with his sister, Mari. So exciting!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_02.png" alt="" loading="eager" decoding="async" data-caption-index="1" data-caption-branch="faraway" data-caption-text="(2/18 - MY BIRTHDAY): It's my 12th birthday today! I thought my friends forgot, but they all surprised me with a strawberry cake. I feel so lucky... This year is looking to be a good year!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_03.png" alt="" loading="eager" decoding="async" data-caption-index="2" data-caption-branch="faraway" data-caption-text="(2/18 MY BIRTHDAY): Another group photo. This was a little after I opened all my presents! Mari bought me this photo album, and everyone else bought me film for my camera. I'll try my best to use it all." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_04.png" alt="" loading="eager" decoding="async" data-caption-index="3" data-caption-branch="faraway" data-caption-text="(2/18 - MY BIRTHDAY): Just Kel being Kel... So... many... party hats..." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_05.png" alt="" loading="eager" decoding="async" data-caption-index="4" data-caption-branch="faraway" data-caption-text="(2/18 MY BIRTHDAY): Sunny playing a video game on the couch. Sunny is a little shy, but he's a really good listener. I always end up venting to him when I get upset or stressed. Sometimes I feel like I'm bothering him, but he never seems to mind." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_06.png" alt="" loading="eager" decoding="async" data-caption-index="5" data-caption-branch="faraway" data-caption-text="(2/18 - MY BIRTHDAY): Mari and Hero fell asleep on the couch. They look so cozy together... Hehe... I hope they don't mind the photo. Mari's dad might be kind of mad if he saw it..." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg1.png" alt="" loading="eager" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div>  <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="eager" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_01.png" alt="" loading="eager" decoding="async" data-caption-index="0" data-caption-branch="faraway" data-caption-text="(12/25 - CHRISTMAS): My first photo! It's my best friend, Sunny, trying out his new violin. He's starting to take lessons again so he can play at recitals with his sister, Mari. So exciting!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_02.png" alt="" loading="eager" decoding="async" data-caption-index="1" data-caption-branch="faraway" data-caption-text="(2/18 - MY BIRTHDAY): It's my 12th birthday today! I thought my friends forgot, but they all surprised me with a strawberry cake. I feel so lucky... This year is looking to be a good year!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_03.png" alt="" loading="eager" decoding="async" data-caption-index="2" data-caption-branch="faraway" data-caption-text="(2/18 MY BIRTHDAY): Another group photo. This was a little after I opened all my presents! Mari bought me this photo album, and everyone else bought me film for my camera. I'll try my best to use it all." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_04.png" alt="" loading="eager" decoding="async" data-caption-index="3" data-caption-branch="faraway" data-caption-text="(2/18 - MY BIRTHDAY): Just Kel being Kel... So... many... party hats..." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_05.png" alt="" loading="eager" decoding="async" data-caption-index="4" data-caption-branch="faraway" data-caption-text="(2/18 MY BIRTHDAY): Sunny playing a video game on the couch. Sunny is a little shy, but he's a really good listener. I always end up venting to him when I get upset or stressed. Sometimes I feel like I'm bothering him, but he never seems to mind." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_06.png" alt="" loading="eager" decoding="async" data-caption-index="5" data-caption-branch="faraway" data-caption-text="(2/18 - MY BIRTHDAY): Mari and Hero fell asleep on the couch. They look so cozy together... Hehe... I hope they don't mind the photo. Mari's dad might be kind of mad if he saw it..." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg1.png" alt="" loading="eager" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>1 / 8</p> </article><article class="album-page hidden" data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb>  <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_07.png" alt="" loading="lazy" decoding="async" data-caption-index="6" data-caption-branch="faraway" data-caption-text="(3/9): Hero and Mari washing the dishes from breakfast. We're staying over at Mari and Sunny's this weekend. It's getting warmer lately so we're about to go to the park. Kel says there's a secret lake area behind some bushes, so we're all going to check it out!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_08.png" alt="" loading="lazy" decoding="async" data-caption-index="7" data-caption-branch="faraway" data-caption-text="(3/9): We're back from the park, but Kel is still full of energy. He challenged Hero to an arm-wrestling match, but we all know who's going to win... please go easy on him, Hero..." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_09.png" alt="" loading="lazy" decoding="async" data-caption-index="8" data-caption-branch="faraway" data-caption-text="(3/9): Oof... Sorry, Kel... Better luck next time." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_10.png" alt="" loading="lazy" decoding="async" data-caption-index="9" data-caption-branch="faraway" data-caption-text="(3/10): Kel was still feeling a little sour about losing to Hero in arm-wrestling last night, so Hero decided to lean in for a smooch! Kel looks so annoyed. Ah, brotherly love..." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_11.png" alt="" loading="lazy" decoding="async" data-caption-index="10" data-caption-branch="faraway" data-caption-text="(3/10): Me showing Sunny a book I've been reading. Mari stole my camera and took this when I wasn't paying attention. I should really keep better track of my things." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_12.png" alt="" loading="lazy" decoding="async" data-caption-index="11" data-caption-branch="faraway" data-caption-text="(3/10): It's all of us cuddling with Sunny's stuffed animals. He has so many, and they're all so soft! I wish I could just lay here forever." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg2.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div>  <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_07.png" alt="" loading="lazy" decoding="async" data-caption-index="6" data-caption-branch="faraway" data-caption-text="(3/9): Hero and Mari washing the dishes from breakfast. We're staying over at Mari and Sunny's this weekend. It's getting warmer lately so we're about to go to the park. Kel says there's a secret lake area behind some bushes, so we're all going to check it out!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_08.png" alt="" loading="lazy" decoding="async" data-caption-index="7" data-caption-branch="faraway" data-caption-text="(3/9): We're back from the park, but Kel is still full of energy. He challenged Hero to an arm-wrestling match, but we all know who's going to win... please go easy on him, Hero..." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_09.png" alt="" loading="lazy" decoding="async" data-caption-index="8" data-caption-branch="faraway" data-caption-text="(3/9): Oof... Sorry, Kel... Better luck next time." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_10.png" alt="" loading="lazy" decoding="async" data-caption-index="9" data-caption-branch="faraway" data-caption-text="(3/10): Kel was still feeling a little sour about losing to Hero in arm-wrestling last night, so Hero decided to lean in for a smooch! Kel looks so annoyed. Ah, brotherly love..." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_11.png" alt="" loading="lazy" decoding="async" data-caption-index="10" data-caption-branch="faraway" data-caption-text="(3/10): Me showing Sunny a book I've been reading. Mari stole my camera and took this when I wasn't paying attention. I should really keep better track of my things." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_12.png" alt="" loading="lazy" decoding="async" data-caption-index="11" data-caption-branch="faraway" data-caption-text="(3/10): It's all of us cuddling with Sunny's stuffed animals. He has so many, and they're all so soft! I wish I could just lay here forever." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg2.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>2 / 8</p> </article><article class="album-page hidden" data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb>  <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_13.png" alt="" loading="lazy" decoding="async" data-caption-index="12" data-caption-branch="faraway" data-caption-text="(3/31): It's already the last day of March! We're having a picnic with Mari at our secret lake spot. Mari wanted to take pictures of everyone! Say cheese!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_14.png" alt="" loading="lazy" decoding="async" data-caption-index="13" data-caption-branch="faraway" data-caption-text="(3/31): After eating all the food, everyone fell asleep, except me, Hero, and Mari. Something unfortunate happened when I was taking the photo. Ahem... Thanks a lot, Hector. I'll have to cover it up with tape later." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_15.png" alt="" loading="lazy" decoding="async" data-caption-index="14" data-caption-branch="faraway" data-caption-text="(4/9): I caught Mari carrying Sunny on the way home from school today. He must have fallen asleep on the bus. I thought it was so cute, so I got my camera out as quick as I could to snap this once-in-a-lifetime photo! Sigh... Sometimes I wish I had a sibling." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_16.png" alt="" loading="lazy" decoding="async" data-caption-index="15" data-caption-branch="faraway" data-caption-text="(4/21): Mari is teaching everyone how to make flower crowns! Here's Sunny and Kel holding Mari's example. It looks perfect, doesn't it? If only Mari thought so, too." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_17.png" alt="" loading="lazy" decoding="async" data-caption-index="16" data-caption-branch="faraway" data-caption-text="(4/21): Sunny and Kel gave up on making flower crowns and ran off, but Aubrey and I got the hang of it really fast! Everyone thinks a flower crown really suits me. Maybe just a flower is okay." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_18.png" alt="" loading="lazy" decoding="async" data-caption-index="17" data-caption-branch="faraway" data-caption-text="(4/21): Hero's still making his flower crown. It's taking him a little while, but he's getting there. You have to admire his persistence!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg3.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div>  <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_13.png" alt="" loading="lazy" decoding="async" data-caption-index="12" data-caption-branch="faraway" data-caption-text="(3/31): It's already the last day of March! We're having a picnic with Mari at our secret lake spot. Mari wanted to take pictures of everyone! Say cheese!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_14.png" alt="" loading="lazy" decoding="async" data-caption-index="13" data-caption-branch="faraway" data-caption-text="(3/31): After eating all the food, everyone fell asleep, except me, Hero, and Mari. Something unfortunate happened when I was taking the photo. Ahem... Thanks a lot, Hector. I'll have to cover it up with tape later." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_15.png" alt="" loading="lazy" decoding="async" data-caption-index="14" data-caption-branch="faraway" data-caption-text="(4/9): I caught Mari carrying Sunny on the way home from school today. He must have fallen asleep on the bus. I thought it was so cute, so I got my camera out as quick as I could to snap this once-in-a-lifetime photo! Sigh... Sometimes I wish I had a sibling." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_16.png" alt="" loading="lazy" decoding="async" data-caption-index="15" data-caption-branch="faraway" data-caption-text="(4/21): Mari is teaching everyone how to make flower crowns! Here's Sunny and Kel holding Mari's example. It looks perfect, doesn't it? If only Mari thought so, too." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_17.png" alt="" loading="lazy" decoding="async" data-caption-index="16" data-caption-branch="faraway" data-caption-text="(4/21): Sunny and Kel gave up on making flower crowns and ran off, but Aubrey and I got the hang of it really fast! Everyone thinks a flower crown really suits me. Maybe just a flower is okay." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_18.png" alt="" loading="lazy" decoding="async" data-caption-index="17" data-caption-branch="faraway" data-caption-text="(4/21): Hero's still making his flower crown. It's taking him a little while, but he's getting there. You have to admire his persistence!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg3.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>3 / 8</p> </article><article class="album-page hidden" data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb>  <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_19.png" alt="" loading="lazy" decoding="async" data-caption-index="18" data-caption-branch="faraway" data-caption-text="(4/29): It's raining super hard today! The rain always seems to come out of nowhere during springtime. Aubrey asked me to take a picture of her with her new raincoat. It's her favorite color, pink!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_20.png" alt="" loading="lazy" decoding="async" data-caption-index="19" data-caption-branch="faraway" data-caption-text="(4/29): Aubrey won't let Kel under the umbrella, but Kel seems to be taking it just fine. He says he likes how the rain tastes." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_21.png" alt="" loading="lazy" decoding="async" data-caption-index="20" data-caption-branch="faraway" data-caption-text="(4/29): Just Kel being Kel again... We went to Hobbeez, but the shop owner told Kel to leave his jacket outside since Kel was getting all his comics wet. Sorry, Shopkeep." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_22.png" alt="" loading="lazy" decoding="async" data-caption-index="21" data-caption-branch="faraway" data-caption-text="(5/25): It's been pretty busy with school lately, but we finally made time to get together and go to the park today. Here's Kel hanging his legs off a tree. He's such a good climber! I wish I was as fearless as him." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_23.png" alt="" loading="lazy" decoding="async" data-caption-index="22" data-caption-branch="faraway" data-caption-text="(5/25): Mari bought everyone popsicles, one of every flavor! Sunny got lemon, Hero got root beer, Kel got orange, Aubrey got watermelon, and Mari got grape! Mine was banana... It tasted okay." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_24.png" alt="" loading="lazy" decoding="async" data-caption-index="23" data-caption-branch="faraway" data-caption-text="(5/25): All of our shoes in a circle! Can you guess whose shoes are whose?" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg4.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div>  <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_19.png" alt="" loading="lazy" decoding="async" data-caption-index="18" data-caption-branch="faraway" data-caption-text="(4/29): It's raining super hard today! The rain always seems to come out of nowhere during springtime. Aubrey asked me to take a picture of her with her new raincoat. It's her favorite color, pink!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_20.png" alt="" loading="lazy" decoding="async" data-caption-index="19" data-caption-branch="faraway" data-caption-text="(4/29): Aubrey won't let Kel under the umbrella, but Kel seems to be taking it just fine. He says he likes how the rain tastes." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_21.png" alt="" loading="lazy" decoding="async" data-caption-index="20" data-caption-branch="faraway" data-caption-text="(4/29): Just Kel being Kel again... We went to Hobbeez, but the shop owner told Kel to leave his jacket outside since Kel was getting all his comics wet. Sorry, Shopkeep." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_22.png" alt="" loading="lazy" decoding="async" data-caption-index="21" data-caption-branch="faraway" data-caption-text="(5/25): It's been pretty busy with school lately, but we finally made time to get together and go to the park today. Here's Kel hanging his legs off a tree. He's such a good climber! I wish I was as fearless as him." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_23.png" alt="" loading="lazy" decoding="async" data-caption-index="22" data-caption-branch="faraway" data-caption-text="(5/25): Mari bought everyone popsicles, one of every flavor! Sunny got lemon, Hero got root beer, Kel got orange, Aubrey got watermelon, and Mari got grape! Mine was banana... It tasted okay." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_24.png" alt="" loading="lazy" decoding="async" data-caption-index="23" data-caption-branch="faraway" data-caption-text="(5/25): All of our shoes in a circle! Can you guess whose shoes are whose?" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg4.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>4 / 8</p> </article><article class="album-page hidden" data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb>  <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_25.png" alt="" loading="lazy" decoding="async" data-caption-index="24" data-caption-branch="faraway" data-caption-text="(6/22): It's the first day of summer vacation, so we all wanted to celebrate by going to the beach! Watermelon is Aubrey's favorite." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_26.png" alt="" loading="lazy" decoding="async" data-caption-index="25" data-caption-branch="faraway" data-caption-text="(6/22): Kel cooling off with some refreshing Orange Joe! I shouldn't get too close or he might get my camera wet. Kel is known to spill his drinks." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_27.png" alt="" loading="lazy" decoding="async" data-caption-index="26" data-caption-branch="faraway" data-caption-text="(6/22): We buried Sunny in the sand! It took forever, but looks like he's enjoying himself. I wonder if he's going to need help getting out. I guess I'll keep him company until then." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_28.png" alt="" loading="lazy" decoding="async" data-caption-index="27" data-caption-branch="faraway" data-caption-text="(6/22): Mari says she wants to get a summer tan! I'm scared to fall asleep in the sun, since I get sunburned really easily. Hmm... I'm not sure what Kel is doing here, but he's probably having a good time." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_29.png" alt="" loading="lazy" decoding="async" data-caption-index="28" data-caption-branch="faraway" data-caption-text="(6/22): Hero sleeping on Mari. He's all tired out from swimming. Well... It seems like Mari won't be able to get her summer tan after all." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_30.png" alt="" loading="lazy" decoding="async" data-caption-index="29" data-caption-branch="faraway" data-caption-text="(6/22): We're about to head home, but I managed to catch one last photo with Mari and Hero! They look so happy. A match made in heaven!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg5.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div>  <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_25.png" alt="" loading="lazy" decoding="async" data-caption-index="24" data-caption-branch="faraway" data-caption-text="(6/22): It's the first day of summer vacation, so we all wanted to celebrate by going to the beach! Watermelon is Aubrey's favorite." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_26.png" alt="" loading="lazy" decoding="async" data-caption-index="25" data-caption-branch="faraway" data-caption-text="(6/22): Kel cooling off with some refreshing Orange Joe! I shouldn't get too close or he might get my camera wet. Kel is known to spill his drinks." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_27.png" alt="" loading="lazy" decoding="async" data-caption-index="26" data-caption-branch="faraway" data-caption-text="(6/22): We buried Sunny in the sand! It took forever, but looks like he's enjoying himself. I wonder if he's going to need help getting out. I guess I'll keep him company until then." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_28.png" alt="" loading="lazy" decoding="async" data-caption-index="27" data-caption-branch="faraway" data-caption-text="(6/22): Mari says she wants to get a summer tan! I'm scared to fall asleep in the sun, since I get sunburned really easily. Hmm... I'm not sure what Kel is doing here, but he's probably having a good time." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_29.png" alt="" loading="lazy" decoding="async" data-caption-index="28" data-caption-branch="faraway" data-caption-text="(6/22): Hero sleeping on Mari. He's all tired out from swimming. Well... It seems like Mari won't be able to get her summer tan after all." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_30.png" alt="" loading="lazy" decoding="async" data-caption-index="29" data-caption-branch="faraway" data-caption-text="(6/22): We're about to head home, but I managed to catch one last photo with Mari and Hero! They look so happy. A match made in heaven!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg5.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>5 / 8</p> </article><article class="album-page hidden" data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb>  <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_31.png" alt="" loading="lazy" decoding="async" data-caption-index="30" data-caption-branch="faraway" data-caption-text="(7/20 - SUNNY'S BIRTHDAY): Yay! Sunny is turning 12 today! Even though me, Sunny, Aubrey, AND Kel are in the same school year, Sunny is younger than all of us. He's the baby of the group, so we have to take care of him!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_32.png" alt="" loading="lazy" decoding="async" data-caption-index="31" data-caption-branch="faraway" data-caption-text="(7/20 SUNNY'S BIRTHDAY): Sunny holding a super huge present, from Mari and Hero! Hmm... I wonder what it is." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_33.png" alt="" loading="lazy" decoding="async" data-caption-index="32" data-caption-branch="faraway" data-caption-text="(7/20 - SUNNY'S BIRTHDAY): You can't really tell from the photo, but Mari and Hero got Sunny a giant building block set. Sunny seems much more interested in the box though. He acts just like Mari's new kitten, MEWO!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_34.png" alt="" loading="lazy" decoding="async" data-caption-index="33" data-caption-branch="faraway" data-caption-text="(7/20 SUNNY'S BIRTHDAY): Sunny won't leave the box, so Kel put a food bowl inside. I guess this box will be Sunny and Mewo's new home." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_35.png" alt="" loading="lazy" decoding="async" data-caption-index="34" data-caption-branch="faraway" data-caption-text="(8/4): We're going beetle-catching today! Here's Kel, ready to pounce on his next victim! Oh, and Sunny is there too. He looks kind of sleepy." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_36.png" alt="" loading="lazy" decoding="async" data-caption-index="35" data-caption-branch="faraway" data-caption-text="(8/4): Mari says this beetle is a giant stag. It suddenly fell from a tree and surprised everyone! Hero is too grossed out to look." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg6.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div>  <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_31.png" alt="" loading="lazy" decoding="async" data-caption-index="30" data-caption-branch="faraway" data-caption-text="(7/20 - SUNNY'S BIRTHDAY): Yay! Sunny is turning 12 today! Even though me, Sunny, Aubrey, AND Kel are in the same school year, Sunny is younger than all of us. He's the baby of the group, so we have to take care of him!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_32.png" alt="" loading="lazy" decoding="async" data-caption-index="31" data-caption-branch="faraway" data-caption-text="(7/20 SUNNY'S BIRTHDAY): Sunny holding a super huge present, from Mari and Hero! Hmm... I wonder what it is." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_33.png" alt="" loading="lazy" decoding="async" data-caption-index="32" data-caption-branch="faraway" data-caption-text="(7/20 - SUNNY'S BIRTHDAY): You can't really tell from the photo, but Mari and Hero got Sunny a giant building block set. Sunny seems much more interested in the box though. He acts just like Mari's new kitten, MEWO!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_34.png" alt="" loading="lazy" decoding="async" data-caption-index="33" data-caption-branch="faraway" data-caption-text="(7/20 SUNNY'S BIRTHDAY): Sunny won't leave the box, so Kel put a food bowl inside. I guess this box will be Sunny and Mewo's new home." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_35.png" alt="" loading="lazy" decoding="async" data-caption-index="34" data-caption-branch="faraway" data-caption-text="(8/4): We're going beetle-catching today! Here's Kel, ready to pounce on his next victim! Oh, and Sunny is there too. He looks kind of sleepy." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_36.png" alt="" loading="lazy" decoding="async" data-caption-index="35" data-caption-branch="faraway" data-caption-text="(8/4): Mari says this beetle is a giant stag. It suddenly fell from a tree and surprised everyone! Hero is too grossed out to look." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg6.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>6 / 8</p> </article><article class="album-page hidden" data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb>  <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_37.png" alt="" loading="lazy" decoding="async" data-caption-index="36" data-caption-branch="faraway" data-caption-text="(8/14): Ta-da! All summer, we've been working on a treehouse in Sunny's backyard and today it's finally finished! Hero and his dad did most of the heavy work, but Aubrey and I made paper plants to put in the window still!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_38.png" alt="" loading="lazy" decoding="async" data-caption-index="37" data-caption-branch="faraway" data-caption-text="(8/14): I went to the bathroom, and came back to this photo... Kel says he took a picture of himself on accident, but I don't believe him..." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_39.png" alt="" loading="lazy" decoding="async" data-caption-index="38" data-caption-branch="faraway" data-caption-text="(8/16): All of us hanging out in our brand new treehouse! Looks like Sunny is finally reading the book I showed him! I want to spend every day in here, but it's a shame that summer vacation is almost over. I hope we get to use this treehouse more next summer!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_40.png" alt="" loading="lazy" decoding="async" data-caption-index="39" data-caption-branch="faraway" data-caption-text="(8/18): We went to Hobbeez to read the latest edition of Capt. Spaceboy! Everyone's so into it right now! I'm sure it's all anyone is going to be talking about once school starts." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_41.png" alt="" loading="lazy" decoding="async" data-caption-index="40" data-caption-branch="faraway" data-caption-text="(9/6): I'm playing cards with Kel, Hero, and Aubrey. They're so easy to read. They can't hide anything on their faces! Mari baked everyone cookies from scratch. They were chocolate chip and super delicious, like always!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_42.png" alt="" loading="lazy" decoding="async" data-caption-index="41" data-caption-branch="faraway" data-caption-text="(9/6): Looks like I have the winning hand, hehe... But nobody knows that yet..." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg7.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div>  <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_37.png" alt="" loading="lazy" decoding="async" data-caption-index="36" data-caption-branch="faraway" data-caption-text="(8/14): Ta-da! All summer, we've been working on a treehouse in Sunny's backyard and today it's finally finished! Hero and his dad did most of the heavy work, but Aubrey and I made paper plants to put in the window still!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_38.png" alt="" loading="lazy" decoding="async" data-caption-index="37" data-caption-branch="faraway" data-caption-text="(8/14): I went to the bathroom, and came back to this photo... Kel says he took a picture of himself on accident, but I don't believe him..." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_39.png" alt="" loading="lazy" decoding="async" data-caption-index="38" data-caption-branch="faraway" data-caption-text="(8/16): All of us hanging out in our brand new treehouse! Looks like Sunny is finally reading the book I showed him! I want to spend every day in here, but it's a shame that summer vacation is almost over. I hope we get to use this treehouse more next summer!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_40.png" alt="" loading="lazy" decoding="async" data-caption-index="39" data-caption-branch="faraway" data-caption-text="(8/18): We went to Hobbeez to read the latest edition of Capt. Spaceboy! Everyone's so into it right now! I'm sure it's all anyone is going to be talking about once school starts." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_41.png" alt="" loading="lazy" decoding="async" data-caption-index="40" data-caption-branch="faraway" data-caption-text="(9/6): I'm playing cards with Kel, Hero, and Aubrey. They're so easy to read. They can't hide anything on their faces! Mari baked everyone cookies from scratch. They were chocolate chip and super delicious, like always!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_42.png" alt="" loading="lazy" decoding="async" data-caption-index="41" data-caption-branch="faraway" data-caption-text="(9/6): Looks like I have the winning hand, hehe... But nobody knows that yet..." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg7.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>7 / 8</p> </article><article class="album-page hidden" data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb>  <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_43.png" alt="" loading="lazy" decoding="async" data-caption-index="42" data-caption-branch="faraway" data-caption-text="(9/9): It's the first day of school today! Me, Sunny, Kel, and Aubrey are up bright and early. Aubrey is so photogenic!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_44.png" alt="" loading="lazy" decoding="async" data-caption-index="43" data-caption-branch="faraway" data-caption-text="(9/9): Sigh... Goodbye, summer! Until next year..." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_45.png" alt="" loading="lazy" decoding="async" data-caption-index="44" data-caption-branch="faraway" data-caption-text="(9/9): Sunny giving Mari a big hug! Mari doesn't come home until late now because she's taking extra classes to prepare for college. Me and Sunny have been hanging out a lot, but I'm sure he still misses her a lot." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_46.png" alt="" loading="lazy" decoding="async" data-caption-index="45" data-caption-branch="faraway" data-caption-text="(9/22): Mari practicing her part for a big recital next month. We're all going to go watch! It's going to be Mari and Sunny's first performance together, but I know they'll do just fine! We will all be showing our support from the audience!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_47.png" alt="" loading="lazy" decoding="async" data-caption-index="46" data-caption-branch="faraway" data-caption-text="(9/22): Mari getting a little camera shy, because she's made a small mistake. Don't worry, Mari! Just keep going! No one will even notice!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_48.png" alt="" loading="lazy" decoding="async" data-caption-index="47" data-caption-branch="faraway" data-caption-text="(9/22): After some begging, Sunny came to join Mari for recital practice... Hehe... They're still working out some stuff, but they already sound so amazing! I know they're going to be great. Go, Mari! Go, Sunny! You can do it!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg8.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div>  <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/faraway_town_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_43.png" alt="" loading="lazy" decoding="async" data-caption-index="42" data-caption-branch="faraway" data-caption-text="(9/9): It's the first day of school today! Me, Sunny, Kel, and Aubrey are up bright and early. Aubrey is so photogenic!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_44.png" alt="" loading="lazy" decoding="async" data-caption-index="43" data-caption-branch="faraway" data-caption-text="(9/9): Sigh... Goodbye, summer! Until next year..." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_45.png" alt="" loading="lazy" decoding="async" data-caption-index="44" data-caption-branch="faraway" data-caption-text="(9/9): Sunny giving Mari a big hug! Mari doesn't come home until late now because she's taking extra classes to prepare for college. Me and Sunny have been hanging out a lot, but I'm sure he still misses her a lot." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/faraway/photos/fa_a_46.png" alt="" loading="lazy" decoding="async" data-caption-index="45" data-caption-branch="faraway" data-caption-text="(9/22): Mari practicing her part for a big recital next month. We're all going to go watch! It's going to be Mari and Sunny's first performance together, but I know they'll do just fine! We will all be showing our support from the audience!" class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_47.png" alt="" loading="lazy" decoding="async" data-caption-index="46" data-caption-branch="faraway" data-caption-text="(9/22): Mari getting a little camera shy, because she's made a small mistake. Don't worry, Mari! Just keep going! No one will even notice!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/faraway/photos/fa_a_48.png" alt="" loading="lazy" decoding="async" data-caption-index="47" data-caption-branch="faraway" data-caption-text="(9/22): After some begging, Sunny came to join Mari for recital practice... Hehe... They're still working out some stuff, but they already sound so amazing! I know they're going to be great. Go, Mari! Go, Sunny! You can do it!" class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/faraway/faraway_pg8.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>8 / 8</p> </article> </div> </section> <!-- Headspace Album（深色模式） --> <section class="hidden" data-theme-branch="dark" data-astro-cid-wostqwtb> <div class="album-shell" data-astro-cid-wostqwtb> <article class="album-page " data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb> <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/dream_world_album.png" alt="" loading="eager" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/photos/dw_a_01.png" alt="" loading="eager" decoding="async" data-caption-index="0" data-caption-branch="dream" data-caption-text="Mari is teaching everyone how to make flower crowns! Omori and Kel are holding Mari's example. So pretty..." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_02.png" alt="" loading="eager" decoding="async" data-caption-index="1" data-caption-branch="dream" data-caption-text="Omori and Kel gave up and ran off, but Aubrey and I got the hang of it really fast!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_03.png" alt="" loading="eager" decoding="async" data-caption-index="2" data-caption-branch="dream" data-caption-text="Hero's still making his flower crown. It's taking him a little while, but he's getting it. You have to admire his persistence." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/photos/dw_a_04.png" alt="" loading="eager" decoding="async" data-caption-index="3" data-caption-branch="dream" data-caption-text="Everyone's eating watermelons. So juicy! Aubrey has some seeds on her face. Maybe someone should tell her." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_05.png" alt="" loading="eager" decoding="async" data-caption-index="4" data-caption-branch="dream" data-caption-text="Kel drinking a bottle of Milk, his favorite! I shouldn't get too close or he might get my camera wet." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_06.png" alt="" loading="eager" decoding="async" data-caption-index="5" data-caption-branch="dream" data-caption-text="Mari had Hero take a picture of us. Everyone thinks a flower crown really suits me." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/dream/dream_pg1.png" alt="" loading="eager" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/dream_world_album.png" alt="" loading="eager" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/photos/dw_a_01.png" alt="" loading="eager" decoding="async" data-caption-index="0" data-caption-branch="dream" data-caption-text="Mari is teaching everyone how to make flower crowns! Omori and Kel are holding Mari's example. So pretty..." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_02.png" alt="" loading="eager" decoding="async" data-caption-index="1" data-caption-branch="dream" data-caption-text="Omori and Kel gave up and ran off, but Aubrey and I got the hang of it really fast!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_03.png" alt="" loading="eager" decoding="async" data-caption-index="2" data-caption-branch="dream" data-caption-text="Hero's still making his flower crown. It's taking him a little while, but he's getting it. You have to admire his persistence." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/photos/dw_a_04.png" alt="" loading="eager" decoding="async" data-caption-index="3" data-caption-branch="dream" data-caption-text="Everyone's eating watermelons. So juicy! Aubrey has some seeds on her face. Maybe someone should tell her." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_05.png" alt="" loading="eager" decoding="async" data-caption-index="4" data-caption-branch="dream" data-caption-text="Kel drinking a bottle of Milk, his favorite! I shouldn't get too close or he might get my camera wet." class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_06.png" alt="" loading="eager" decoding="async" data-caption-index="5" data-caption-branch="dream" data-caption-text="Mari had Hero take a picture of us. Everyone thinks a flower crown really suits me." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/dream/dream_pg1.png" alt="" loading="eager" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>1 / 2</p> </article><article class="album-page hidden" data-spread data-astro-cid-wostqwtb> <div class="album-spread" data-astro-cid-wostqwtb> <div class="album-half-left" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/dream_world_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/photos/dw_a_07.png" alt="" loading="lazy" decoding="async" data-caption-index="6" data-caption-branch="dream" data-caption-text="Hero leaning in for a smooch! Kel looks so annoyed. Ah, brotherly love..." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_08.png" alt="" loading="lazy" decoding="async" data-caption-index="7" data-caption-branch="dream" data-caption-text="We're having a picnic today! Mari wanted to take a picture of everyone. Say cheese!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_09.png" alt="" loading="lazy" decoding="async" data-caption-index="8" data-caption-branch="dream" data-caption-text="After eating, everyone fell asleep, except Hero and Mari. I'm getting kind of sleepy myself." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/photos/dw_a_10.png" alt="" loading="lazy" decoding="async" data-caption-index="9" data-caption-branch="dream" data-caption-text="Kel said he took a picture of himself on accident, but I don't believe him...." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_11.png" alt="" loading="lazy" decoding="async" data-caption-index="10" data-caption-branch="dream" data-caption-text="All of our feet in a circle! Can you guess whose feet are whose?" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_12.png" alt="" loading="lazy" decoding="async" data-caption-index="11" data-caption-branch="dream" data-caption-text="My best friends... KEL, AUBREY, HERO, and OMORI! I'll cherish them all forever." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/dream/dream_pg2.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> <div class="album-half-right" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/dream_world_album.png" alt="" loading="lazy" decoding="async" class="album-bg" data-astro-cid-wostqwtb> <div class="album-photos-overlay" data-astro-cid-wostqwtb> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/photos/dw_a_07.png" alt="" loading="lazy" decoding="async" data-caption-index="6" data-caption-branch="dream" data-caption-text="Hero leaning in for a smooch! Kel looks so annoyed. Ah, brotherly love..." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_08.png" alt="" loading="lazy" decoding="async" data-caption-index="7" data-caption-branch="dream" data-caption-text="We're having a picnic today! Mari wanted to take a picture of everyone. Say cheese!" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_09.png" alt="" loading="lazy" decoding="async" data-caption-index="8" data-caption-branch="dream" data-caption-text="After eating, everyone fell asleep, except Hero and Mari. I'm getting kind of sleepy myself." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> <div class="album-photos-col" data-astro-cid-wostqwtb> <img src="/images/omori-albums/dream/photos/dw_a_10.png" alt="" loading="lazy" decoding="async" data-caption-index="9" data-caption-branch="dream" data-caption-text="Kel said he took a picture of himself on accident, but I don't believe him...." class="album-photo photo-left" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_11.png" alt="" loading="lazy" decoding="async" data-caption-index="10" data-caption-branch="dream" data-caption-text="All of our feet in a circle! Can you guess whose feet are whose?" class="album-photo photo-right" data-astro-cid-wostqwtb><img src="/images/omori-albums/dream/photos/dw_a_12.png" alt="" loading="lazy" decoding="async" data-caption-index="11" data-caption-branch="dream" data-caption-text="My best friends... KEL, AUBREY, HERO, and OMORI! I'll cherish them all forever." class="album-photo photo-third" data-astro-cid-wostqwtb> </div> </div> <img src="/images/omori-albums/dream/dream_pg2.png" alt="" loading="lazy" decoding="async" class="album-caption" data-astro-cid-wostqwtb> </div> </div> <p class="album-pagination" data-astro-cid-wostqwtb>2 / 2</p> </article> </div> </section> </div> <div class="album-lightbox hidden" data-lightbox data-astro-cid-wostqwtb> <button type="button" class="album-lightbox-close" data-lightbox-close aria-label="Close preview" data-astro-cid-wostqwtb>×</button> <button type="button" class="album-lightbox-nav album-lightbox-nav-prev hidden" data-lightbox-prev aria-label="上一张" data-astro-cid-wostqwtb> <img src="/images/omori-albums/ui/acs-arrows/ACSArrows_left.png" alt="" aria-hidden="true" data-astro-cid-wostqwtb> </button> <button type="button" class="album-lightbox-nav album-lightbox-nav-next hidden" data-lightbox-next aria-label="下一张" data-astro-cid-wostqwtb> <img src="/images/omori-albums/ui/acs-arrows/ACSArrows_right.png" alt="" aria-hidden="true" data-astro-cid-wostqwtb> </button> <div class="album-lightbox-content" data-lightbox-content data-astro-cid-wostqwtb> <img src="" alt="Photo preview" class="album-lightbox-image" data-lightbox-image data-astro-cid-wostqwtb> <div class="omori-dialogue" data-lightbox-dialogue data-astro-cid-wostqwtb> <div class="omori-speakerbox" data-lightbox-speaker data-astro-cid-wostqwtb>PHOTO</div> <div class="omori-face-and-text" data-astro-cid-wostqwtb> <div class="omori-textbox" data-lightbox-text data-astro-cid-wostqwtb></div> <img src="/images/omori-albums/ui/acs-arrow-right.png" alt="" class="omori-continue-arrow" aria-hidden="true" data-astro-cid-wostqwtb> <div class="omori-facebox" aria-hidden="true" data-astro-cid-wostqwtb></div> </div> </div> </div> </div>  </main> <footer class="border-t border-slate-200 dark:border-slate-800 mt-16 text-slate-500 text-sm"> <div class="container max-w-4xl mx-auto px-4 md:px-6 py-10 text-center"> <div class="flex justify-center gap-4 mb-5"> <a href="https://github.com/Gu-Heping" target="_blank" class="hover:text-primary-ink transition-colors"> GitHub </a> </div> <p class="text-slate-600 dark:text-slate-400">
+© 2026 Peace · Peace&#39;s Home · Astro & Tailwind
+</p> <aside class="mt-8 pt-8 border-t border-dashed border-slate-200/90 dark:border-slate-700/90 max-w-lg mx-auto" aria-label="版权声明"> <p class="text-[0.65rem] font-medium uppercase tracking-[0.22em] text-slate-400 dark:text-slate-500 mb-3">
+版权声明
+</p> <div class="text-[11px] sm:text-xs leading-relaxed text-slate-400 dark:text-slate-500 space-y-2 text-balance"> <p>
+本站非《OMORI》官方站点。游戏台词及可能使用的截图、美术素材之著作权归
+<span class="whitespace-nowrap">OMOCAT, LLC</span>
+等权利人所有。
+</p> <p>
+内容仅供个人非商业备忘与交流。
+
+若需下架请通过
+<a href="https://github.com/Gu-Heping" target="_blank" rel="noopener noreferrer" class="mx-0.5 underline decoration-slate-400/40 underline-offset-2 hover:text-primary-ink hover:decoration-primary-ink/50">
+GitHub
+</a>
+联系。
+ </p> </div> </aside> </div> </footer>  <astro-island uid="1Jhstp" prefix="r4" component-url="/assets/GlobalMiniPlayerSection.DtSJF5-b.js" component-export="default" renderer-url="/assets/client.DKx3p5Vh.js" props="{&quot;data-astro-transition-persist&quot;:[0,&quot;astro-jgysxpi6-1&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;GlobalMiniPlayerSection&quot;,&quot;value&quot;:true}" data-astro-transition-persist="astro-jgysxpi6-1" await-children><audio class="hidden" preload="metadata"></audio><!--astro:end--></astro-island> <astro-island uid="1FLz56" prefix="r5" component-url="/assets/BackToTop.DmnPzCHC.js" component-export="default" renderer-url="/assets/client.DKx3p5Vh.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;BackToTop&quot;,&quot;value&quot;:true}" await-children><button type="button" aria-label="返回顶部" class="fixed bottom-[5.5rem] right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full border border-slate-900/10 bg-slate-900/35 text-slate-100 shadow-lg backdrop-blur-md transition-[opacity,transform] duration-300 ease-out dark:border-white/15 dark:bg-white/25 dark:text-slate-900 pointer-events-none translate-y-2 opacity-0 "><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg></button><!--astro:end--></astro-island> </body></html> <script>
+  (() => {
+    const ALBUM_CLEANUP_KEY = '__omoriAlbumCleanup';
+    const albumWindow = /** @type {Window & { [key: string]: unknown }} */ (window);
+
+    const initAlbumPage = () => {
+      const albumStage = document.querySelector('[data-album-stage]');
+      if (!(albumStage instanceof HTMLElement)) return;
+      const prevCleanup = albumWindow[ALBUM_CLEANUP_KEY];
+      if (typeof prevCleanup === 'function') {
+        try {
+          prevCleanup();
+        } catch (_) {
+          // ignore stale cleanup errors from previous page instance
+        }
+      }
+      albumStage.dataset.albumInitialized = 'true';
+      // 避免从其它页面保留滚动位置，导致 Tab 首次聚焦时出现“突然上移”。
+      if (window.scrollY !== 0 || window.scrollX !== 0) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      }
+
+      const abortController = new AbortController();
+      const { signal } = abortController;
+      const cleanupTasks = [];
+
+      // 相册页锁定焦点范围，避免 Tab 跳到页脚/悬浮按钮触发滚动位移。
+      const pageFooter = document.querySelector('footer');
+      if (pageFooter instanceof HTMLElement) {
+        const previousInert = pageFooter.inert;
+        pageFooter.inert = true;
+        cleanupTasks.push(() => {
+          pageFooter.inert = previousInert;
+        });
+      }
+
+      const backToTopButton = document.querySelector('button[aria-label="返回顶部"]');
+      if (backToTopButton instanceof HTMLButtonElement) {
+        const previousTabIndexAttr = backToTopButton.getAttribute('tabindex');
+        backToTopButton.setAttribute('tabindex', '-1');
+        cleanupTasks.push(() => {
+          if (previousTabIndexAttr === null) {
+            backToTopButton.removeAttribute('tabindex');
+          } else {
+            backToTopButton.setAttribute('tabindex', previousTabIndexAttr);
+          }
+        });
+      }
+
+    /* ── 主题分支同步 ── */
+    const syncThemeBranch = () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      document.querySelector('[data-theme-branch="light"]')?.classList.toggle('hidden', isDark);
+      document.querySelector('[data-theme-branch="dark"]')?.classList.toggle('hidden', !isDark);
+    };
+    syncThemeBranch();
+
+    const themeObserver = new MutationObserver((records) => {
+      if (records.some(r => r.attributeName === 'class')) syncThemeBranch();
+    });
+    themeObserver.observe(document.documentElement, { attributes: true });
+    cleanupTasks.push(() => themeObserver.disconnect());
+
+    const animatePageFlip = async (fromPage, toPage, dir) => {
+      const fromSpread = fromPage?.querySelector('.album-spread');
+      const toSpread   = toPage?.querySelector('.album-spread');
+      if (!(fromSpread instanceof HTMLElement) || !(toSpread instanceof HTMLElement)) return;
+
+      // dir > 0：向右翻（右半页翻走，左半页填入）；dir < 0 反之
+      const flipSide = dir > 0 ? 'right' : 'left';
+      const fillSide = dir > 0 ? 'left'  : 'right';
+      const outDeg   = dir > 0 ? -90 : 90;  // Phase 1 旋出终止角
+      const inDeg    = -outDeg;              // Phase 2 旋入起始角（Z 轴连续）
+
+      const fromFlipHalf = /** @type {HTMLElement|null} */ (fromSpread.querySelector(`.album-half-${flipSide}`));
+      const toFillHalf   = /** @type {HTMLElement|null} */ (toSpread.querySelector(`.album-half-${fillSide}`));
+      if (!fromFlipHalf || !toFillHalf) return;
+
+      // toPage 叠在 fromPage 下方（z=0 < z=1），作为"书页下面那层"，
+      // 其对应的"揭示半页"（toRevealHalf）自然在 fromFlipHalf 后面随之显露。
+      fromPage.style.position = 'relative';
+      fromPage.style.zIndex   = '1';
+      fromPage.classList.add('is-flipping-out');
+      toPage.style.position   = 'absolute';
+      toPage.style.inset      = '0';
+      toPage.style.zIndex     = '0';
+      toPage.classList.remove('hidden');
+      toPage.classList.add('is-flipping-in');
+
+      // toFillHalf 预设 edge-on，准备 Phase 2 展开
+      // （此时在 fromPage 后面，不可见，不影响视觉）
+      toFillHalf.style.transform  = `perspective(900px) rotateY(${inDeg}deg)`;
+      toFillHalf.style.filter     = 'brightness(0.5)';
+      fromFlipHalf.style.willChange = 'transform, filter';
+      toFillHalf.style.willChange   = 'transform, filter';
+
+      // ── Phase 1：fromFlipHalf 压缩折叠（0° → edge-on）──
+      await fromFlipHalf.animate(
+        [
+          { transform: 'perspective(900px) rotateY(0deg)',         filter: 'brightness(1)'   },
+          { transform: `perspective(900px) rotateY(${outDeg}deg)`, filter: 'brightness(0.5)' },
+        ],
+        { duration: 440, easing: 'ease-in', fill: 'forwards' },
+      ).finished.catch(() => null);
+
+      // Phase 1 结束，将 toPage 提升至 fromPage 之上，toFillHalf 从 edge-on 展开
+      toPage.style.zIndex = '2';
+
+      // ── Phase 2：toFillHalf 展开（edge-on → 0°）──
+      await toFillHalf.animate(
+        [
+          { transform: `perspective(900px) rotateY(${inDeg}deg)`, filter: 'brightness(0.5)' },
+          { transform: 'perspective(900px) rotateY(0deg)',         filter: 'brightness(1)'   },
+        ],
+        { duration: 440, easing: 'ease-out', fill: 'forwards' },
+      ).finished.catch(() => null);
+
+      // 清理：还原所有临时内联样式，浏览器合批渲染，不产生空白帧
+      fromPage.classList.add('hidden');
+      fromPage.classList.remove('is-flipping-out');
+      toPage.classList.remove('is-flipping-in');
+      fromPage.style.position     = '';
+      fromPage.style.zIndex       = '';
+      toPage.style.position       = '';
+      toPage.style.inset          = '';
+      toPage.style.zIndex         = '';
+      fromFlipHalf.getAnimations().forEach(a => a.cancel());
+      fromFlipHalf.style.willChange = '';
+      toFillHalf.getAnimations().forEach(a => a.cancel());
+      toFillHalf.style.transform  = '';
+      toFillHalf.style.filter     = '';
+      toFillHalf.style.willChange = '';
+    };
+
+    /* ── 每个主题分支维护独立的翻页状态 ── */
+    const states = {};
+    ['light', 'dark'].forEach((theme) => {
+      const section = document.querySelector(`[data-theme-branch="${theme}"]`);
+      if (!section) return;
+      const spreads = Array.from(section.querySelectorAll('[data-spread]'));
+      if (!spreads.length) return;
+      states[theme] = { spreads, current: 0, isFlipping: false };
+      spreads.forEach((s, i) => s.classList.toggle('hidden', i !== 0));
+    });
+
+    const applyVisibleSpread = (state, targetIndex) => {
+      if (!state || !state.spreads?.length) return;
+      const nextIndex = Math.max(0, Math.min(state.spreads.length - 1, targetIndex));
+      state.current = nextIndex;
+      state.spreads.forEach((spread, idx) => {
+        spread.classList.toggle('hidden', idx !== nextIndex);
+        spread.classList.remove('is-flipping-out', 'is-flipping-in');
+        // 清理翻页动画残留，避免两页叠在一起显示页码
+        spread.style.position = '';
+        spread.style.inset = '';
+        spread.style.zIndex = '';
+      });
+      syncStageNav();
+    };
+
+    const getCurrentTheme = () => (document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+
+    const syncStageNav = () => {
+      const state = states[getCurrentTheme()];
+      if (!state || !state.spreads?.length) {
+        stagePrev?.classList.add('hidden');
+        stageNext?.classList.add('hidden');
+        return;
+      }
+      stagePrev?.classList.toggle('hidden', state.current <= 0);
+      stageNext?.classList.toggle('hidden', state.current >= state.spreads.length - 1);
+    };
+
+
+    /* ── 照片预览（点击放大） ── */
+    const lightbox = document.querySelector('[data-lightbox]');
+    const lightboxImage = document.querySelector('[data-lightbox-image]');
+    const lightboxClose = document.querySelector('[data-lightbox-close]');
+    const lightboxPrev = document.querySelector('[data-lightbox-prev]');
+    const lightboxNext = document.querySelector('[data-lightbox-next]');
+    const lightboxSpeaker = document.querySelector('[data-lightbox-speaker]');
+    const lightboxText = document.querySelector('[data-lightbox-text]');
+    const lightboxDialogue = document.querySelector('[data-lightbox-dialogue]');
+    const stagePrev = document.querySelector('[data-stage-prev]');
+    const stageNext = document.querySelector('[data-stage-next]');
+    const continueArrow = document.querySelector('.omori-continue-arrow');
+    let isPreviewOpen = false;
+    let currentPhotoElement = null;
+    let typingTimer = null;
+    let typingFullText = '';
+    let typingIndex = 0;
+    let typingDone = true;
+    let dialogueAnimating = false;
+    let currentPreviewBranch = 'faraway';
+    let currentPreviewIndex = 0;
+
+    const photoRecords = new Map();
+    Array.from(document.querySelectorAll('.album-photo')).forEach((photo) => {
+      if (!(photo instanceof HTMLElement)) return;
+      const branch = photo.getAttribute('data-caption-branch') || 'faraway';
+      const index = Number(photo.getAttribute('data-caption-index') || '0');
+      const key = `${branch}:${index}`;
+      if (photoRecords.has(key)) return;
+      photoRecords.set(key, {
+        branch,
+        index,
+        src: photo.getAttribute('src') || '',
+        caption: photo.getAttribute('data-caption-text') || '',
+      });
+    });
+
+    const branchIndexes = { faraway: [], dream: [] };
+    photoRecords.forEach((record) => {
+      if (record.branch === 'dream') branchIndexes.dream.push(record.index);
+      else branchIndexes.faraway.push(record.index);
+    });
+    branchIndexes.faraway.sort((a, b) => a - b);
+    branchIndexes.dream.sort((a, b) => a - b);
+
+    const stopTyping = () => {
+      if (typingTimer !== null) {
+        window.clearInterval(typingTimer);
+        typingTimer = null;
+      }
+    };
+
+    const finishTyping = () => {
+      if (!lightboxText) return;
+      stopTyping();
+      typingIndex = typingFullText.length;
+      lightboxText.textContent = typingFullText;
+      typingDone = true;
+      continueArrow?.classList.remove('hidden');
+    };
+
+    const startTyping = (text) => {
+      if (!lightboxText) return;
+      stopTyping();
+      typingFullText = text ?? '';
+      typingIndex = 0;
+      lightboxText.textContent = '';
+      continueArrow?.classList.add('hidden');
+      if (!typingFullText.length) {
+        typingDone = true;
+        continueArrow?.classList.remove('hidden');
+        return;
+      }
+      typingDone = false;
+      typingTimer = window.setInterval(() => {
+        typingIndex += 1;
+        lightboxText.textContent = typingFullText.slice(0, typingIndex);
+        if (typingIndex >= typingFullText.length) {
+          finishTyping();
+        }
+      }, 22);
+    };
+
+    const waitForAnimationEnd = (element, fallbackMs = 360) => new Promise((resolve) => {
+      if (!(element instanceof HTMLElement)) {
+        resolve();
+        return;
+      }
+      let done = false;
+      const finish = () => {
+        if (done) return;
+        done = true;
+        resolve();
+      };
+      element.addEventListener('animationend', finish, { once: true });
+      window.setTimeout(finish, fallbackMs);
+    });
+
+    const openDialogueAndType = async (text, withOpenAnimation = true) => {
+      if (!(lightboxDialogue instanceof HTMLElement)) {
+        startTyping(text);
+        return;
+      }
+      const isHidden = lightboxDialogue.classList.contains('hidden');
+      lightboxDialogue.classList.remove('is-dialogue-closing');
+      if (withOpenAnimation && isHidden) {
+        dialogueAnimating = true;
+        lightboxDialogue.classList.remove('hidden');
+        lightboxDialogue.classList.add('is-dialogue-opening');
+        await waitForAnimationEnd(lightboxDialogue, 420);
+        lightboxDialogue.classList.remove('is-dialogue-opening');
+        dialogueAnimating = false;
+      } else {
+        lightboxDialogue.classList.remove('hidden');
+      }
+      startTyping(text);
+    };
+
+    const closeDialogueAnimated = async () => {
+      if (!(lightboxDialogue instanceof HTMLElement)) return;
+      if (lightboxDialogue.classList.contains('hidden')) return;
+      dialogueAnimating = true;
+      lightboxDialogue.classList.remove('is-dialogue-opening');
+      lightboxDialogue.classList.add('is-dialogue-closing');
+      await waitForAnimationEnd(lightboxDialogue, 360);
+      lightboxDialogue.classList.remove('is-dialogue-closing');
+      lightboxDialogue.classList.add('hidden');
+      if (lightboxText) lightboxText.textContent = '';
+      continueArrow?.classList.add('hidden');
+      typingFullText = '';
+      typingIndex = 0;
+      typingDone = true;
+      dialogueAnimating = false;
+    };
+
+    const closePreview = () => {
+      if (!lightbox || !lightboxImage) return;
+      syncSpreadToPreview();
+      lightbox.classList.add('hidden');
+      lightboxImage.setAttribute('src', '');
+      if (lightboxSpeaker) lightboxSpeaker.textContent = 'PHOTO';
+      if (lightboxText) lightboxText.textContent = '';
+      continueArrow?.classList.add('hidden');
+      lightboxDialogue?.classList.remove('hidden');
+      stopTyping();
+      typingFullText = '';
+      typingIndex = 0;
+      typingDone = true;
+      if (currentPhotoElement) currentPhotoElement.style.visibility = '';
+      albumStage?.classList.remove('preview-active');
+      currentPhotoElement = null;
+      isPreviewOpen = false;
+      currentPreviewBranch = 'faraway';
+      currentPreviewIndex = 0;
+      lightboxPrev?.classList.add('hidden');
+      lightboxNext?.classList.add('hidden');
+    };
+
+    const getSiblingIndex = (branch, index, dir) => {
+      const list = branch === 'dream' ? branchIndexes.dream : branchIndexes.faraway;
+      const pos = list.indexOf(index);
+      if (pos < 0) return null;
+      const nextPos = pos + dir;
+      if (nextPos < 0 || nextPos >= list.length) return null;
+      return list[nextPos];
+    };
+
+    const syncSpreadToPreview = () => {
+      const theme = currentPreviewBranch === 'dream' ? 'dark' : 'light';
+      const state = states[theme];
+      if (!state || !state.spreads.length) return;
+      const targetSpread = Math.floor(currentPreviewIndex / 6);
+      if (targetSpread < 0 || targetSpread >= state.spreads.length) return;
+      applyVisibleSpread(state, targetSpread);
+    };
+
+    const flipStagePage = async (dir) => {
+      const state = states[getCurrentTheme()];
+      if (!state || state.isFlipping) return;
+      const next = Math.max(0, Math.min(state.spreads.length - 1, state.current + dir));
+      if (next === state.current) return;
+      state.isFlipping = true;
+      const fromPage = state.spreads[state.current];
+      const toPage = state.spreads[next];
+      await animatePageFlip(fromPage, toPage, dir > 0 ? 1 : -1);
+      applyVisibleSpread(state, next);
+      state.isFlipping = false;
+    };
+
+    // 移动端手势翻页：左滑下一页，右滑上一页
+    let stageTouchStartX = 0;
+    let stageTouchStartY = 0;
+    let stageTouchActive = false;
+
+    const syncPreviewNav = () => {
+      const hasPrev = getSiblingIndex(currentPreviewBranch, currentPreviewIndex, -1) !== null;
+      const hasNext = getSiblingIndex(currentPreviewBranch, currentPreviewIndex, 1) !== null;
+      lightboxPrev?.classList.toggle('hidden', !hasPrev);
+      lightboxNext?.classList.toggle('hidden', !hasNext);
+    };
+
+    const showPreviewByMeta = async ({ branch, index, src, caption }, withZoom = false, keepCurrentImage = false, withDialogueOpenAnimation = true) => {
+      if (!lightbox || !lightboxImage || !src) return;
+      if (withZoom && currentPhotoElement) currentPhotoElement.style.visibility = 'hidden';
+      if (withZoom && lightboxDialogue instanceof HTMLElement) {
+        lightboxDialogue.classList.add('hidden');
+      }
+      albumStage?.classList.add('preview-active');
+      lightbox.classList.remove('hidden');
+      if (!keepCurrentImage) {
+        lightboxImage.classList.remove('is-ready');
+        lightboxImage.setAttribute('src', src);
+      }
+      if (lightboxSpeaker) {
+        lightboxSpeaker.textContent = `${branch === 'dream' ? 'HEADSPACE' : 'FARAWAY'} #${index + 1}`;
+      }
+      await openDialogueAndType(caption || '', withDialogueOpenAnimation);
+      isPreviewOpen = true;
+      currentPreviewBranch = branch;
+      currentPreviewIndex = index;
+      syncPreviewNav();
+    };
+
+    const smoothSwitchImage = (nextSrc) => {
+      if (!lightboxImage || !nextSrc) return;
+      if (lightboxImage.getAttribute('src') === nextSrc) return;
+      lightboxImage.classList.add('is-switching');
+      window.setTimeout(() => {
+        lightboxImage.classList.remove('is-ready');
+        lightboxImage.setAttribute('src', nextSrc);
+      }, 120);
+    };
+
+    const switchPreviewPhoto = async (dir) => {
+      const nextIndex = getSiblingIndex(currentPreviewBranch, currentPreviewIndex, dir);
+      if (nextIndex === null) return;
+      if (currentPhotoElement) currentPhotoElement.style.visibility = '';
+      currentPhotoElement = null;
+      const nextRecord = photoRecords.get(`${currentPreviewBranch}:${nextIndex}`);
+      if (!nextRecord) return;
+      smoothSwitchImage(nextRecord.src);
+      const shouldAnimateDialogue = !!(lightboxDialogue instanceof HTMLElement && lightboxDialogue.classList.contains('hidden'));
+      await showPreviewByMeta(nextRecord, false, true, shouldAnimateDialogue);
+    };
+
+    // 预览层手势切图：左滑下一张，右滑上一张
+    let previewTouchStartX = 0;
+    let previewTouchStartY = 0;
+    let previewTouchActive = false;
+
+    const runZoomIn = (photo) => {
+      const src = photo.getAttribute('src');
+      if (!src) return Promise.resolve(false);
+      const rect = photo.getBoundingClientRect();
+
+      const ghost = document.createElement('img');
+      ghost.src = src;
+      ghost.className = 'album-zoom-ghost';
+      ghost.style.left = `${rect.left}px`;
+      ghost.style.top = `${rect.top}px`;
+      ghost.style.width = `${rect.width}px`;
+      ghost.style.height = `${rect.height}px`;
+      document.body.appendChild(ghost);
+
+      const maxW = Math.min(window.innerWidth * 0.92, 860);
+      const maxH = Math.min(window.innerHeight * 0.68, 860);
+      const ratio = rect.width / rect.height || 1;
+      let targetW = maxW;
+      let targetH = targetW / ratio;
+      if (targetH > maxH) {
+        targetH = maxH;
+        targetW = targetH * ratio;
+      }
+      const targetLeft = (window.innerWidth - targetW) / 2;
+      const targetTop = (window.innerHeight - targetH) / 2 - 24;
+
+      requestAnimationFrame(() => {
+        ghost.style.left = `${targetLeft}px`;
+        ghost.style.top = `${targetTop}px`;
+        ghost.style.width = `${targetW}px`;
+        ghost.style.height = `${targetH}px`;
+      });
+
+      return new Promise((resolve) => {
+        let done = false;
+        const finish = () => {
+          if (done) return;
+          done = true;
+          ghost.remove();
+          resolve(true);
+        };
+        ghost.addEventListener('transitionend', finish, { once: true });
+        window.setTimeout(finish, 450);
+      });
+    };
+
+    if (lightbox && lightboxImage) {
+      albumStage.addEventListener('click', async (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const photo = target.closest('.album-photo');
+        if (!(photo instanceof HTMLElement)) return;
+        if (isPreviewOpen) return;
+
+        const src = photo.getAttribute('src');
+        if (!src) return;
+        const branch = photo.getAttribute('data-caption-branch') || 'faraway';
+        const index = Number(photo.getAttribute('data-caption-index') || '0') + 1;
+        const caption = photo.getAttribute('data-caption-text') || '';
+        currentPhotoElement = photo;
+        await showPreviewByMeta({ branch, index: index - 1, src, caption }, true);
+        await runZoomIn(photo);
+      }, { signal });
+
+      lightbox.addEventListener('click', async (e) => {
+        if (e.target === lightbox) {
+          closePreview();
+        }
+      }, { signal });
+      lightboxClose?.addEventListener('click', closePreview, { signal });
+      lightboxPrev?.addEventListener('click', async () => {
+        if (dialogueAnimating) return;
+        await switchPreviewPhoto(-1);
+      }, { signal });
+      lightboxNext?.addEventListener('click', async () => {
+        if (dialogueAnimating) return;
+        await switchPreviewPhoto(1);
+      }, { signal });
+      lightboxDialogue?.addEventListener('click', async () => {
+        if (!isPreviewOpen) return;
+        if (dialogueAnimating) return;
+        if (!typingDone) {
+          finishTyping();
+          return;
+        }
+        await closeDialogueAnimated();
+      }, { signal });
+      lightboxImage.addEventListener('load', () => {
+        lightboxImage.classList.remove('is-switching');
+        lightboxImage.classList.add('is-ready');
+      }, { signal });
+
+      lightbox.addEventListener('touchstart', (e) => {
+        if (!isPreviewOpen || dialogueAnimating) return;
+        const touch = e.changedTouches?.[0];
+        if (!touch) return;
+        previewTouchStartX = touch.clientX;
+        previewTouchStartY = touch.clientY;
+        previewTouchActive = true;
+      }, { passive: true, signal });
+
+      lightbox.addEventListener('touchend', async (e) => {
+        if (!previewTouchActive) return;
+        previewTouchActive = false;
+        if (!isPreviewOpen || dialogueAnimating) return;
+        const touch = e.changedTouches?.[0];
+        if (!touch) return;
+        const dx = touch.clientX - previewTouchStartX;
+        const dy = touch.clientY - previewTouchStartY;
+        if (Math.abs(dx) < 40 || Math.abs(dx) <= Math.abs(dy)) return;
+        await switchPreviewPhoto(dx < 0 ? 1 : -1);
+      }, { passive: true, signal });
+    }
+
+    stagePrev?.addEventListener('click', async () => {
+      if (isPreviewOpen || dialogueAnimating) return;
+      await flipStagePage(-1);
+    }, { signal });
+    stageNext?.addEventListener('click', async () => {
+      if (isPreviewOpen || dialogueAnimating) return;
+      await flipStagePage(1);
+    }, { signal });
+
+    albumStage.addEventListener('touchstart', (e) => {
+      if (isPreviewOpen || dialogueAnimating) return;
+      const touch = e.changedTouches?.[0];
+      if (!touch) return;
+      stageTouchStartX = touch.clientX;
+      stageTouchStartY = touch.clientY;
+      stageTouchActive = true;
+    }, { passive: true, signal });
+
+    albumStage.addEventListener('touchend', async (e) => {
+      if (!stageTouchActive) return;
+      stageTouchActive = false;
+      if (isPreviewOpen || dialogueAnimating) return;
+      const touch = e.changedTouches?.[0];
+      if (!touch) return;
+      const dx = touch.clientX - stageTouchStartX;
+      const dy = touch.clientY - stageTouchStartY;
+      // 主要响应横向滑动，避免与纵向滚动手势冲突
+      if (Math.abs(dx) < 40 || Math.abs(dx) <= Math.abs(dy)) return;
+      await flipStagePage(dx < 0 ? 1 : -1);
+    }, { passive: true, signal });
+
+    syncStageNav();
+
+    /* ── 左右键翻页 ── */
+    document.addEventListener('keydown', async (e) => {
+      if (isPreviewOpen && !typingDone) {
+        finishTyping();
+        return;
+      }
+      if (e.key === 'Escape' && isPreviewOpen) {
+        closePreview();
+        return;
+      }
+      if (isPreviewOpen && e.key === 'ArrowLeft') {
+        if (dialogueAnimating) return;
+        await switchPreviewPhoto(-1);
+        return;
+      }
+      if (isPreviewOpen && e.key === 'ArrowRight') {
+        if (dialogueAnimating) return;
+        await switchPreviewPhoto(1);
+        return;
+      }
+      if (isPreviewOpen) return;
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      await flipStagePage(e.key === 'ArrowRight' ? 1 : -1);
+    }, { signal });
+
+      const teardown = () => {
+        stopTyping();
+        closePreview();
+        cleanupTasks.forEach((task) => task());
+        abortController.abort();
+        delete albumStage.dataset.albumInitialized;
+        if (albumWindow[ALBUM_CLEANUP_KEY] === teardown) {
+          delete albumWindow[ALBUM_CLEANUP_KEY];
+        }
+      };
+      albumWindow[ALBUM_CLEANUP_KEY] = teardown;
+
+      document.addEventListener('astro:before-swap', teardown, { once: true, signal });
+    };
+
+    initAlbumPage();
+    document.addEventListener('astro:page-load', initAlbumPage);
+    window.addEventListener('pageshow', initAlbumPage);
+  })();
+</script>  

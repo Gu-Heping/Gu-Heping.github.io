@@ -1,0 +1,1 @@
+let u=null,i=null;function t(e){if(u=e,u&&i){const n=i;i=null,u(n.tracks,n.startIndex)}}function l(e,n=0){if(!(!Array.isArray(e)||e.length===0)){if(u){u(e,n);return}i={tracks:e,startIndex:n}}}export{l as d,t as s};
